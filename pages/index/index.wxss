@@ -1,0 +1,261 @@
+/**index.wxss**/
+.container{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%
+}
+view{
+  color: #4D4D4D;
+}
+.yh-mast-fh {
+  background-color: #49a0ff;
+  box-sizing: border-box;
+  padding: 30rpx 25rpx;
+}
+
+.yh-mast-hl {
+  width: 100%;
+  display: flex;
+}
+
+.yh-mast-icon image {
+  width: 45rpx;
+  height: 40rpx;
+}
+
+.yh-mast-img {
+  width: 7%;
+}
+
+.yh-mast-title {
+  width: 86%;
+  color: #fff;
+}
+
+.yh-mast-icon {
+  width: 7%;
+}
+
+.yh-mast-search {
+  width: 100%;
+  margin-top: 20rpx;
+   height: 75rpx;
+  border-radius: 55rpx;
+  background-color: #fff !important;
+  display: flex;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-size: 36rpx 36rpx;
+  background-position-x: 128rpx;
+  background-position-y: center;
+}
+
+.yh-mast-search .input {
+  height: 75rpx;
+  width: 90%;
+  border-radius: 55rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: transparent;
+  color: #000 !important;
+}
+.yh-mast-sear{
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.yh-mast-canc{
+  height: 75rpx;
+  line-height: 96rpx;
+  color: #fff;
+  margin-left: 30rpx;
+}
+.yh-mast-searchs{
+  width: 86%;
+ background-position-x: 30rpx;
+  background-repeat: no-repeat;
+}
+.yh-mast-searchs .input{
+  text-align: left !important;
+  box-sizing: border-box;
+}
+
+.grace-list{
+  margin-top: 30rpx;
+}
+
+.yh-holders{
+  box-sizing: border-box;
+    color: #ccc;
+  font-size: 26rpx;
+  background-repeat: no-repeat;
+}
+
+.yh-holder {
+  color: #ccc;
+  font-size: 26rpx;
+}
+.yh-mast-main{
+  box-sizing: border-box;
+  padding: 25rpx 25rpx;
+  padding-right: 0px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0px;
+}
+.yh-mast-hom{
+ box-sizing: border-box;
+  padding: 25rpx 25rpx;
+}
+.yh-mast-swiper{
+  width: 100%;
+  height: 309rpx;
+}
+.yh-mast-swiper image{
+  width: 95%;
+  height: 100%;
+  border-radius: 10rpx
+}
+.i-noticebar{
+  background-color: #fff !important
+}
+.yh-mast-atnai {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+}
+
+.yh-mast-left {
+  width: 10%;
+}
+
+.yh-mast-left image {
+  width: 35rpx;
+  height: 40rpx;
+}
+
+.yh-mast-center {
+  width: 90%;
+  color: #49a0ff;
+  height: 45rpx
+}
+.yh-mast-grid{
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx
+}
+.yh-mast-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 24%;
+}
+.yh-mast-item image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.yh-mast-qm {
+  display: flex
+}
+.yh-mast-qm text:nth-of-type(1){
+  width: 6rpx;
+  height: 30rpx;
+  background-color: #48A0FF;
+border-radius: 30rpx;
+}
+.yh-mast-qm text:nth-of-type(2){
+  font-weight: bold;
+  color: #303030;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left: 15rpx;
+  flex: 10
+}
+.yh-mast-qm text:nth-of-type(3){
+  color: #ccc;
+  flex: 2
+}
+.yh-mast-grids{
+  box-sizing: border-box;
+  padding: 20rpx 0px;
+  border-radius: 10rpx;
+    box-shadow: 0px 0px 4px 4px rgba(137, 137, 137, 0.05);
+}
+.yh-mast-items{
+  border-right: 1px solid #eee
+}
+.yh-mast-items:last-of-type{
+  border-right: 0px solid #eee
+}
+.yh-mast-items image{
+ width: 90rpx;
+  height: 90rpx;
+}
+.yh-mast-column{
+  box-sizing: border-box;
+  padding: 0rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+   box-shadow: 1px 1px 12rpx #ccc;
+}
+.yh-column-items{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10rpx;
+  border-bottom: 2rpx solid #eee;
+   box-sizing: border-box;
+   padding: 30rpx 0px;
+}
+.yh-column-items .text:nth-of-type(1){
+  display: block;
+  flex: 1;
+}
+.yh-column-items .text:nth-of-type(2){
+  display: block;
+  flex: 10;
+  text-align: left
+}
+.yh-column-items .text:nth-of-type(3){
+  display: block;
+  flex: 1;
+  display: flex;
+  justify-content: center
+}
+.yh-mast-items:nth-of-type(1) image{
+ width: 49rpx;
+ height: 39rpx;
+}
+
+.yh-mast-items:nth-of-type(2) image{
+  width: 42rpx;
+ height: 43rpx;
+}
+
+.yh-mast-items:nth-of-type(3) image{
+ width: 44rpx;
+ height: 43rpx;
+}
+
+.yh-mast-items:nth-of-type(4) image{
+ width: 43rpx;
+ height: 41rpx;
+}
+.yh-mast-items text{
+  color: #4D4D4D;
+  margin-top: 15rpx;
+}
+.swiper_container {
+  height: 45rpx;
+  width: 100%;
+}
+.swiper_item {
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+swiper{
+  height: 300rpx;
+}

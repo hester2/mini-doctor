@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="yh-mast-fh">
+    <view class="yh-mast-hl" hidden="{{hiddenNamet}}">
+      <view class="yh-mast-img">
+        <i-icon type="coordinates" size="20" color="#fff" />
+      </view>
+      <text class="yh-mast-title">{{province}} {{city}} {{district}}</text>
+      <view class="yh-mast-icon" bindtap="handleScan">
+        <image src="{{imgServer}}icon-searchs_2.png"></image>
+      </view>
+    </view>
+    <view class="yh-mast-search" style="  background-image: url('https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-searchs_1.png');" hidden="{{hiden}}">
+      <input type="text" class="input" bindinput="searchChange" bindconfirm="searchNow" bindfocus="inputFocus" placeholder-class="yh-holder" confirm-type="search" placeholder="搜索周边、医院、症状、服务" />
+    </view>
+    <view class="yh-mast-sear" hidden="{{hide}}">
+      <view class="yh-mast-search yh-mast-searchs" style="  background-image: url('https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-searchs_1.png');">
+        <input type="text" class="input" bindinput="searchChange" bindconfirm="searchNow" bindfocus="inputFocus" placeholder-class="yh-holders" confirm-type="search" placeholder="搜索周边、医院、症状、服务" />
+      </view>
+      <view class="yh-mast-canc" bindtap="handleCancle">取消</view>
+    </view>
+  </view>
+  <view class="yh-mast-main">
+    <view class="yh-mast-swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="true" next-margin="30px" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{list}}" wx:key="*this">
+          <swiper-item style="width: 95%;">
+            <image src="{{item.url}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+        <view class="yh-mast-atnai">
+          <view class="yh-mast-left">
+            <image src="{{imgServer}}icon-searchs_3.png"></image>
+          </view>
+          <view class="yh-mast-center">
+            <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="3000">
+              <block wx:for="{{title_j}}" wx:key="">
+                <swiper-item>
+                  <view class="swiper_item">{{item.title}}</view>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+          <view class="yh-mast-left" style="text-align:center;">
+            <i-icon type="enter" size="19" color="#49A0FF"></i-icon>
+          </view>
+        </view>
+  </view>
+  <view class="yh-mast-hom">
+    <view class="yh-mast-grid">
+      <view class="yh-mast-item" bindtap="handleClick">
+        <image src="{{imgServer}}icon-searchs_4.png"></image>
+        <text>我的患者</text>
+      </view>
+      <view class="yh-mast-item">
+        <image src="{{imgServer}}icon-searchs_5.png"></image>
+        <text>开通服务</text>
+      </view>
+      <view class="yh-mast-item" bindtap="handlePre">
+        <image src="{{imgServer}}icon-searchs_6.png"></image>
+        <text>开处方</text>
+      </view> 
+      <view class="yh-mast-item" bindtap="handleHome">
+        <image src="{{imgServer}}icon-searchs_7.png"></image>
+        <text>我的主页</text>
+      </view>
+    </view>
+  </view>
+  <view class="yh-mast-hom">
+    <view class="yh-mast-qm">
+      <text></text>
+      <text>订单管理</text>
+      <text bindtap="handleAll">查看全部</text>
+    </view>
+    <view class="yh-mast-grid yh-mast-grids">
+      <view class="yh-mast-item yh-mast-items" wx:for="{{ order }}" wx:key="index" data-index="{{item.id}}" bindtap="handleChange">
+        <image src="{{item.img}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>

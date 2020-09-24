@@ -1,0 +1,70 @@
+<!--pages/message/chat/doctor-home/index.wxml-->
+<view class="yh-visits-container">
+  <view class="yh-visits-qm">
+    <text></text>
+    <text>患者信息</text>
+    <text></text>
+  </view>
+  <view class="yh-visits-rol">
+    <view class="yh-visits-fg">姓名：
+      <text>林兰芳</text>
+    </view>
+    <view class="yh-visits-fg yh-visits-fe">性别：
+      <text>女</text>
+    </view>
+    <view class="yh-visits-fg yh-visits-fe">年龄：
+      <text>34</text>
+    </view>
+  </view>
+  <view class="yh-visits-qm">
+    <text></text>
+    <text>病情描述</text>
+    <text></text>
+  </view>
+  <view class="yh-visits-illness">
+    怎么回事呢？而且每次都是头疼的想吐，浑身都是晕乎乎的状态，每天睡觉都有睡九个多小时，为什么还会有这种情况呢？
+  </view>
+  <view class="yh-figure-photo">
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-1.png"></image>
+    </view>
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-1.png"></image>
+    </view>
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-1.png"></image>
+    </view>
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-1.png"></image>
+    </view>
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-2.png"></image>
+    </view>
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-2.png"></image>
+    </view>
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-2.png"></image>
+    </view>
+    <view class="yh-figure-left">
+      <image src="{{imgServer}}icon-visits-2.png"></image>
+    </view>
+  </view>
+  <view class="yh-visits-qm">
+    <text></text>
+    <text>就诊历史</text>
+    <text></text>
+  </view>
+  <view class="yh-visits-her">
+    <view class="yh-visits-le">就诊时间</view>
+    <view class="yh-visits-re">2019-12-15</view>
+  </view>
+  <view class="yh-visits-her">
+    <view class="yh-visits-le">就诊医院</view>
+    <view class="yh-visits-re">厦门第一医院附属医院</view>
+  </view>
+  <view class="yh-visits-her">
+    <view class="yh-visits-le">就诊科室</view>
+    <view class="yh-visits-re">神经内科</view>
+  </view>
+</view>

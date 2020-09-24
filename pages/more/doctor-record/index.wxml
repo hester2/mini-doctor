@@ -1,0 +1,103 @@
+<!--pages/more/doctor-record/index.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+  <view class="yh-record-title">请按照下方要求上传证件原件彩色照片</view>
+  <!--身份证-->
+  <view class="yh-cation-main">
+    <text class="word-class">身份证（请上传身份证正反面）</text>
+    <view class="yh-figure-photo">
+      <view class="yh-figure-left" wx:for="{{previewImageArrs_identity}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_identity==''?true:false}}">
+        <image bindtap="previewImg_identity" data-src="{{item}}" src="{{item}}"></image>
+      </view>
+      <view class="yh-figure-left" wx:for="{{previewImageArr_identity}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_identity==''?false:true}}">
+        <image bindtap="previewImg" data-src="{{item}}" src="{{item}}"></image>
+        <image class="ot-tem-del" data-index="{{index}}" catchtap="deleteImage_identity" src="{{imgServer}}icon-figure_5.png"></image>
+      </view>
+
+      <view class="yh-figure-left" bindtap="handleUpload_identity" wx:if="{{previewImageArr_identity.length=='8'?false:true}}">
+        <image src="{{imgServer}}icon-figure_4.png"></image>
+
+      </view>
+
+    </view>
+  </view>
+  <!--资格证-->
+  <view class="yh-cation-main">
+    <text class="word-class">资格证（照片页和信息页必传，最多8张）</text>
+    <view class="yh-figure-photo">
+      <view class="yh-figure-left" wx:for="{{previewImageArrs}}" wx:key="{{item.id}}" wx:if="{{previewImageArr==''?true:false}}">
+        <image bindtap="previewImg" data-src="{{item}}" src="{{item}}"></image>
+      </view>
+      <view class="yh-figure-left" wx:for="{{previewImageArr}}" wx:key="{{item.id}}" wx:if="{{previewImageArr==''?false:true}}">
+        <image bindtap="previewImg" data-src="{{item}}" src="{{item}}"></image>
+        <image class="ot-tem-del" data-index="{{index}}" catchtap="deleteImage" src="{{imgServer}}icon-figure_5.png"></image>
+      </view>
+
+      <view class="yh-figure-left" bindtap="handleUpload" wx:if="{{previewImageArr.length=='8'?false:true}}">
+        <image src="{{imgServer}}icon-figure_4.png"></image>
+
+      </view>
+
+    </view>
+  </view>
+  <!--执业证-->
+  <view class="yh-cation-main">
+    <text class="word-class">执业证（照片页和信息页必传，最多8张）</text>
+    <view class="yh-figure-photo">
+      <view class="yh-figure-left" wx:for="{{previewImageArrs_title}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_title==''?true:false}}">
+        <image bindtap="previewImg_title" data-src="{{item}}" src="{{item}}"></image>
+      </view>
+      <view class="yh-figure-left" wx:for="{{previewImageArr_title}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_title==''?false:true}}">
+        <image bindtap="previewImg_title" data-src="{{item}}" src="{{item}}"></image>
+        <image class="ot-tem-del" data-index="{{index}}" catchtap="deleteImage_title " src="{{imgServer}}icon-figure_5.png"></image>
+      </view>
+      <view class="yh-figure-left" bindtap="handleUpload_title" wx:if="{{previewImageArr_title.length=='8'?false:true}}">
+        <image src="{{imgServer}}icon-figure_4.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 职称证 -->
+  <view class="yh-cation-main">
+    <text class="word-class">职称证（照片页和信息页必传，最多8张）</text>
+    <view class="yh-figure-photo">
+      <view class="yh-figure-left" wx:for="{{previewImageArrs_pro}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_pro==''?true:false}}">
+        <image bindtap="previewImg_pro" data-src="{{item}}" src="{{item}}"></image>
+      </view>
+      <view class="yh-figure-left" wx:for="{{previewImageArr_pro}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_pro==''?false:true}}">
+        <image bindtap="previewImg_pro" data-src="{{item}}" src="{{item}}"></image>
+        <image class="ot-tem-del" data-index="{{index}}" catchtap="deleteImage_pro" src="{{imgServer}}icon-figure_5.png"></image>
+      </view>
+      <view class="yh-figure-left" bindtap="handleUpload_pro" wx:if="{{previewImageArr_pro.length=='8'?false:true}}">
+        <image src="{{imgServer}}icon-figure_4.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 正面照 -->
+  <view class="yh-cation-main">
+    <text class="word-class">正面照（建议身着白大褂拍照）</text>
+    <view class="yh-figure-photo">
+      <view class="yh-figure-left" wx:for="{{previewImageArrs_positive}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_positive==''?true:false}}">
+        <image bindtap="previewImg_positive" data-src="{{item}}" src="{{item}}"></image>
+      </view>
+      <view class="yh-figure-left" wx:for="{{previewImageArr_positive}}" wx:key="{{item.id}}" wx:if="{{previewImageArr_positive==''?false:true}}">
+        <image bindtap="previewImg_positive" data-src="{{item}}" src="{{item}}"></image>
+        <image class="ot-tem-del" data-index="{{index}}" catchtap="deleteImage_positive" src="{{imgServer}}icon-figure_5.png"></image>
+      </view>
+      <view class="yh-figure-left" bindtap="handleUpload_positive" wx:if="{{previewImageArr_positive.length=='8'?false:true}}">
+        <image src="{{imgServer}}icon-figure_4.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="yh-doctor-bottom">
+    <view class="yh-figure-vw">
+      <i-radio value="{{animal}}" disabled="{{disabled}}" checked="{{checked}}" bindchange="handleAnimalChange">
+      </i-radio>
+      <view style="display:flex;color:#B3B3B3">已阅读并同意
+        <text class="yh-figure-zhi">《知情同意书》</text>
+      </view>
+    </view>
+    <view class="yh-doctor-cor">《伊好互联网医院医师多点执业注册备案委托协议》</view>
+  </view>
+  <button class="" formType="submit" >提交</button>
+  </form>
+</view>

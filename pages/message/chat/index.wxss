@@ -1,0 +1,277 @@
+/* pages/chat/index.wxss */
+
+.yh-mast-fh {
+  background-color: #49a0ff;
+  box-sizing: border-box;
+  padding: 15rpx 25rpx;
+}
+
+.yh-mast-hl {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.yh-mast-le {
+  flex: 1;
+  display: flex;
+  align-items: center
+}
+
+.yh-mast-rg {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.yh-mast-title {
+  color: #fff;
+  display: flex;
+  flex: 9;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yh-mast-title text:nth-of-type(1) {
+  font-weight: bold;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.yh-mast-title text:nth-of-type(2) {
+  font-size: 22rpx;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.yh-mast-main {
+  width: 100%;
+  height: 100%;
+}
+
+.yh-mast-grid {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  justify-content: space-between;
+  box-shadow: 1px 1px 12rpx #ccc;
+  box-sizing: border-box;
+  padding: 20rpx 25rpx;
+  position: fixed;
+  top: 97rpx;
+  z-index: 99;
+
+}
+
+.yh-mast-grid .body {
+  display: flex;
+  align-items: center;
+}
+
+.yh-mast-grid .body text:nth-of-type(1) {
+  width: 15rpx;
+  height: 15rpx;
+  display: block;
+  border-radius: 50%;
+  background-color: #ffb653;
+}
+
+.yh-mast-grid .body text:nth-of-type(2) {
+  display: block;
+  margin-left: 15rpx;
+}
+
+.yh-mast-grid .title text:nth-of-type(1) {
+  color: #49a0ff;
+}
+
+.yh-mast-body {
+  height: 100%;
+  margin: 25rpx 25rpx;
+  margin-top: 84rpx;
+  box-sizing: border-box;
+  padding-top: 45rpx;
+}
+
+.yh-mast-home {
+  display: flex;
+  flex-direction: column;
+}
+
+.yh-mast-home .view {
+  text-align: center;
+  color: #cccc;
+  font-size: 22rpx;
+  margin-top: 30rpx;
+}
+
+.yh-mast-chat {
+  display: flex;
+  overflow: hidden;
+  margin-top: 40rpx;
+}
+
+.yh-mast-chats {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.yh-mast-chat .icons image {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+
+.yh-mast-chat .title {
+  margin-top: 30rpx;
+  margin-left: 18rpx;
+  max-width: 320rpx;
+  word-break: break-all;
+  border-radius: 10rpx;
+  background-color: #f3f7fa;
+  box-sizing: border-box;
+  padding: 20rpx 25rpx;
+  display: flex;
+}
+
+.yh-mast-chat .title image {
+  width: 270rpx;
+}
+.yh-mast-chat .titles{
+  background-color: #49A0FF;
+  color: #fff;
+  margin-right: 18rpx;
+}
+.yh-mast-chat .title .icons{
+  height: 77rpx;
+  width: 77rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yh-mast-chat .title .icons image{
+  height: 74rpx;
+  width: 74rpx;
+  border-radius: 0px
+}
+.yh-mast-chat .title .desc{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+.yh-mast-chat .title .desc text{
+  display: block;
+  color: #4D4D4D;
+}
+.yh-mast-chat .title .desc text:nth-of-type(1){
+  font-size: 28rpx;
+}
+.yh-mast-chat .title .desc text:nth-of-type(2){
+  font-size: 20rpx;
+  margin-top: 10rpx
+}
+.yh-mast-mg{
+  border-top: 1px solid #eee;
+  position: fixed;
+  bottom: 0px;
+  box-sizing: border-box;
+  padding: 25rpx 25rpx;
+  width: 100%;
+  z-index: 99;
+  background-color: #fff;
+}
+.yh-mast-row{
+  display: flex;
+   width: 100%
+}
+.yh-mast-ft{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.yh-mast-ft image{
+  height: 73rpx;
+  width: 73rpx;
+}
+.yh-mast-fr image{
+  margin-left: 20rpx;
+  height: 73rpx;
+  width: 73rpx;
+}
+.yh-mast-fc{
+  flex: 8;
+  display: flex;
+  align-items: center
+}
+.yh-mast-fc input{
+  width: 100%;
+  height: 75rpx;
+  background-color:#F4F7F9;
+  line-height: 75rpx;
+  border-radius: 40rpx;
+}
+.yh-mast-fr{
+  flex: 2;
+  display: flex;
+  align-items: center
+}
+.yh-holder{
+
+}
+.yh-mast-bind{
+  box-sizing: border-box;
+  padding: 70rpx 50rpx;
+  display: flex;
+  justify-content: center
+}
+.yh-mast-bind .yh-mast-col{
+  width: 35%;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.yh-mast-bind .yh-mast-col:nth-of-type(4){
+  margin-right:0rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.yh-mast-bind .yh-mast-col .yh-mast-items{
+  background-color:#F4F7F9;
+  box-sizing: border-box;
+  padding: 25rpx 20rpx; 
+  display: flex;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+.yh-mast-bind .yh-mast-col .yh-mast-items image{
+  width: 51rpx;
+  height: 44rpx;
+}
+.yh-mast-bind .yh-mast-col .text{
+  margin-top: 15rpx;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #4D4D4D;
+}
+.yh-mast-main scroll-view{
+  padding-bottom: 130rpx !important;
+  box-sizing: border-box;
+}
+.yh-mast-color{
+  color: #49a0ff;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+button{
+  display: inline !important
+}

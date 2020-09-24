@@ -1,0 +1,90 @@
+<!--pages/index/cases-details/index.wxml-->
+<view class="container">
+  <view class="yh-cases-main">
+    <view class="yh-cases-hl">NO.248420261625</view>
+    <view class="yh-cases-hl">
+      <view class="yh-cases-left">类型：
+        <text>门诊</text>
+      </view>
+      <view class="yh-cases-right">时间：
+        <text>2019-12-20</text>
+      </view>
+    </view>
+    <view class="yh-cases-hl">
+      <view class="yh-cases-left">科室：
+        <text>内分泌科</text>
+      </view>
+      <view class="yh-cases-right">医生：
+        <text>王华健</text>
+      </view>
+    </view>
+    <view class="yh-cases-hl">
+      <view class="yh-cases-left">医院：
+        <text>复旦大学附属中山医院厦门医院</text>
+      </view>
+    </view>
+  </view>
+  <view class="yh-cases-main yh-cases-main-b">
+    <view class="yh-cases-items">
+      <view>既往史</view>
+      <view class="view" bindtap="showDialog">糖尿病、高血压…
+        <text class=" grace-icons icon-arrow-right " style="margin-left:5px; "></text>
+      </view>
+    </view>
+    <view class="yh-cases-items ">
+      <view>既往史</view>
+      <view class="view ">无
+      </view>
+    </view>
+  </view>
+  <view class="yh-cases-main ">
+    <view class="yh-cases-title ">病情描述</view>
+    <view class="yh-cases-title-s ">怎么回事呢？而且每次都是头疼的想吐，浑身都是晕乎乎的状态，每天睡觉都有睡九个多小时，为什么还会有这种情况呢？</view>
+    <view class="yh-cases-phone ">
+     <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+      <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+      <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+      <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+      <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+      <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+      <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+      <view class="yh-cases-phone-item ">
+       <image src="{{imgServer}}icon-cases_1.png "></image>
+     </view>
+    </view>
+  </view>
+  <view class="yh-cases-main ">
+    <view class="yh-cases-title ">患者就该病情到医院就诊过</view>
+    <view class="yh-cases-title ">就诊时间：<text>2019-12-20</text></view>
+    <view class="yh-cases-title ">科室：<text>内分泌科</text></view>
+    <view class="yh-cases-title ">就诊医院：<text>内分泌科</text></view>
+  </view>
+    <view class="yh-cases-main ">
+    <view class="yh-cases-title-c "><text>初步诊断</text><text>问诊过程</text></view>
+    <view class="yh-cases-title "><text>陈旧心肌梗塞，心绞痛</text></view>
+  </view>
+</view>
+<!--  -->
+
+<view class="yh-modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="yh-modal-dialog" wx:if="{{showModal}}">
+  <view class="yh-modal-title">既往史</view>
+  <view class="yh-modal-content">
+    糖尿病、高血压、冠心病、过敏性哮喘、
+心律失常、心肌梗塞
+  </view>
+</view>

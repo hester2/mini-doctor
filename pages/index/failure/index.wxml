@@ -1,0 +1,12 @@
+<!--pages/index/failure/index.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="yh-pre-mast yh-pre-mall">
+    <view class="yh-pre-num yh-pre-nus">{{empNos}}</view>
+    <view class="yh-evalu-tex">
+      <textarea placeholder-class="place-holder" placeholder-style="line-height: 50rpx;" placeholder="请详细填写复核意见 " name="introduction" maxlength='300' bindinput='limit' value="{{text}}" style="font-size: 14px;" />
+      <text>{{current}} / {{max}}</text>
+    </view>
+  </view>
+
+  <button class="yh-pre-btn" formType="submit" bindtap="handleClick">确定</button>
+</form>

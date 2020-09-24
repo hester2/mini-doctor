@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/guide/index",
+    "pages/index/index",
+    "pages/more/reset/index",
+    "pages/more/signature/index",
+    "pages/index/visits/index",
+    "pages/more/doctor-record/index",
+    "pages/more/doctor-certified/index",
+    "pages/index/patients-details/index",
+    "pages/index/cases-details/index",
+    "pages/index/patients/index",
+    "pages/index/patients-edit/index",
+    "pages/message/doctor-home/edit/index",
+    "pages/index/prescription-details/index",
+    "pages/index/failure/index",
+    "pages/index/review/index",
+    "pages/index/prescription/index",
+    "pages/message/chat/visits/index",
+    "pages/message/doctor-home/index",
+    "pages/more/home-page/index",
+    "pages/more/index",
+    "pages/message/user-detail/index",
+    "pages/message/chat/index",
+    "pages/message/index",
+    "pages/logs/logs",
+    "pages/login/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FAFDFF"
+  },
+  "tabBar": {
+    "selectedColor": "#49A0FF",
+    "color": "#B3B3B3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工作台",
+        "iconPath": "/tabbar-icon/icon-job_1.png",
+        "selectedIconPath": "/tabbar-icon/icon-job_2.png"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息",
+        "iconPath": "/tabbar-icon/icon-job_3.png",
+        "selectedIconPath": "/tabbar-icon/icon-job_4.png"
+      },
+      {
+        "pagePath": "pages/more/index",
+        "text": "我的",
+        "iconPath": "/tabbar-icon/icon-job_5.png",
+        "selectedIconPath": "/tabbar-icon/icon-job_6.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

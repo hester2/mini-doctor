@@ -1,0 +1,110 @@
+/* pages/message/chat/doctor-home/index.wxss */
+view{
+  color: #4D4D4D;
+}
+.yh-visits-container{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 28rpx;
+}
+.yh-visits-qm {
+  display: flex;
+  margin-top: 25rpx;
+}
+
+.yh-visits-qm text:nth-of-type(1) {
+  width: 6rpx;
+  height: 30rpx;
+  background-color: #48a0ff;
+  border-radius: 30rpx;
+}
+
+.yh-visits-qm text:nth-of-type(2) {
+  font-weight: bold;
+  color: #303030;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left: 15rpx;
+  flex: 10;
+}
+
+.yh-visits-qm text:nth-of-type(3) {
+  color: #ccc;
+  flex: 2;
+  text-align: right;
+}
+.yh-visits-rol{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 46rpx 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yh-visits-fg{
+  width: 33.33%;
+}
+.yh-visits-fg{
+  width: 33.33%;
+}
+.yh-visits-fg{
+  width: 33.33%;
+}
+.yh-visits-fg text{
+  color: #B3B3B3;
+}
+.yh-visits-fe{
+   margin-left: 30rpx;
+}
+.yh-visits-illness{
+  margin-top: 47rpx;
+  box-sizing: border-box;
+  padding: 0px 25rpx;
+  color: #B3B3B3;
+  line-height: 52rpx;
+}
+.yh-figure-photo{
+  display: flex;
+    flex-flow:row wrap;
+  justify-content: flex-start;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  box-sizing: border-box;
+  padding: 0px 25rpx;
+}
+.yh-figure-left{
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 137rpx;
+  margin-right: 25rpx;
+  margin-bottom: 25rpx;
+  position: relative;
+}
+.yh-figure-left:nth-of-type(4){
+  margin-right:0rpx;
+}
+.yh-figure-left:nth-of-type(8){
+  margin-right:0rpx;
+}
+.yh-figure-left image{
+  width: 137rpx;
+  height: 137rpx;
+}
+.yh-visits-her{
+  height: 80rpx;
+  margin-top:36rpx;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 25rpx;
+  align-items: center;
+}
+.yh-visits-le{
+  color: #4D4D4D;
+}
+.yh-visits-re{
+  color: #808080;
+}

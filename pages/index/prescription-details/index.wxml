@@ -1,0 +1,106 @@
+<!--pages/index/prescription-details/index.wxml-->
+<view class="container">
+  <view class="yh-presc-header">
+    <view class="yh-presc-flc">伊好物联网医院 （处方筏）</view>
+    <view class="yh-presc-fle">普通药品 处方</view>
+  </view>
+  <view class="yh-presc-main">
+    <view class="yh-presc-items">
+      <view class="yh-presc-desc">NO.248420261625</view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">姓名：
+          <text>林兰芳</text>
+        </view>
+        <view class="yh-presc-left">性别：
+          <text>女</text>
+        </view>
+        <view class="yh-presc-left">年龄：
+          <text>34岁</text>
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">费别：
+          <text>自费</text>
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">门诊病历号：
+          <text>NO.20191026162563</text>
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">初步诊断：
+          <text>陈旧心肌梗塞，心绞痛</text>
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">医生：
+          <text>王华健 · 主任医师</text>
+        </view>
+        <view class="yh-presc-left">科室：
+          <text>心血管科</text>
+        </view>
+      </view>
+    </view>
+    <view class="yh-presc-items" style="padding-bottom:55rpx;">
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">指定药店：
+          <text>厦门柏康大药房</text>
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left yh-presc-sizes">RP：
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left yh-presc-size">阿莫西林胶囊
+        </view>
+        <view class="yh-presc-left ">处方量：1
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">药品规格：
+          <text>0.5g*24粒</text>
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">用法用量：
+          <text class="texts">饭后半小时口服，成人一次一粒，每6~8小时1次</text>
+        </view>
+      </view>
+    </view>
+    <view class="yh-presc-items">
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left yh-presc-size">立普妥
+        </view>
+        <view class="yh-presc-left ">处方量：2
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">药品规格：
+          <text>20mg/粒*7粒（盒）</text>
+        </view>
+      </view>
+      <view class="yh-presc-desc">
+        <view class="yh-presc-left">用法用量：
+          <text>口服，一次一粒，20mg一次，每日一次</text>
+        </view>
+      </view>
+      <view class="yh-presc-descs">
+        <view class="yh-presc-col"> 
+          <view>医生签名：<text></text></view>
+          <view class="yh-presc-title">2019-10-26  21:10:56</view>
+        </view>
+        <view class="yh-presc-col"> 
+          <view>复核药师签名：<text></text></view>
+          <view class="yh-presc-title">2019-10-26  21:10:56</view>
+        </view>
+        <view class="yh-presc-col"> 
+          <view>配药药师签名：<text></text></view>
+          <view class="yh-presc-title">2019-10-26  21:10:56</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="yh-presc-ga">注意: <text>本处方筏仅限于本院指定药店配送，自行配药不具有处方效力，为确保用药安全，本处方3日内有效。</text></view>
+</view>

@@ -1,0 +1,265 @@
+.container {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.yh-visits-title {
+  width: 100%;
+  height: 88rpx;
+  background: white;
+  box-shadow: 3rpx 3rpx 16rpx #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.yh-title-sel {
+  color: #b3b3b3;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-sel  .line-style {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.yh-title-sel-selected {
+  color: #49a0ff;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.yh-title-sel-selected text {
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.yh-title-sel text {
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.yh-title-sel-selected .line-style {
+  background: #49a0ff;
+  height: 5rpx;
+  width: 90rpx;
+  position: relative;
+}
+
+.yh-title-sel-selected {
+  height: 60rpx;
+}
+
+.yh-title-sel {
+  height: 60rpx;
+}
+
+button:not([size='mini']) {
+  min-height: 0px;
+  width: 196rpx;
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+
+.yh-swiper {
+  width: 100%;
+  flex: 1;
+  overflow: scroll;
+  margin: 0 auto;
+}
+
+.record-item {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 5rpx;
+  padding-top: 5rpx;
+  font-size: 30rpx;
+}
+
+.yh-visits-main {
+  box-sizing: border-box;
+  margin: 30rpx 30rpx;
+}
+
+.yh-visits-card {
+  box-shadow: 3rpx 3rpx 16rpx #f1f1f1;
+  box-sizing: border-box;
+  padding: 35rpx 35rpx;
+  margin-bottom: 25rpx;
+}
+
+.yh-visits-text {
+  color: #49a0ff;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 20rpx;
+}
+
+.yh-visits-items {
+  display: flex;
+  border-bottom: 3rpx solid #f1f1f1;
+}
+
+.yh-visits-com {
+  flex: 2;
+}
+
+.yh-visits-coms {
+  flex: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.yh-visits-com image {
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 50%;
+}
+
+.yh-visits-lc {
+  display: flex;
+  align-items: center;
+  color: #4d4d4d;
+}
+
+.yh-visits-lc text {
+  display: block;
+  margin-top: 0px;
+  margin-right: 20rpx;
+}
+
+.yh-visits-lc text:nth-of-type(1) {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.yh-visits-titles {
+  font-size: 22rpx;
+  text-align: center;
+  border: 1px solid #49a0ff;
+  border-radius: 18rpx;
+  color: #49a0ff;
+  line-height: 32rpx;
+  height: 32rpx;
+  padding: 0px 20rpx;
+}
+
+.yh-visits-le {
+  display: flex;
+  align-items: center;
+  color: #4d4d4d;
+  margin-top: 15rpx;
+}
+
+.yh-visits-le text:nth-of-type(1) {
+  font-size: 28rpx;
+  display: block;
+}
+
+.yh-visits-le text:nth-of-type(2) {
+  font-size: 22rpx;
+  display: block;
+  color: #f3cf33;
+  border-radius: 5rpx;
+  border: 1px solid #f3cf33;
+  margin-left: 10rpx;
+  box-sizing: border-box;
+  padding: 0px 10rpx;
+}
+
+.yh-visits-lr {
+  line-height: 45rpx;
+  height: 45rpx;
+  margin-top: 13rpx;
+  color: #b3b3b3;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 520rpx;
+  margin-bottom: 10rpx;
+}
+
+.yh-visits-row {
+  display: flex;
+  margin: 20rpx 0px;
+}
+
+.yh-visits-row text {
+  display: block;
+  width: 50%;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.yh-visits-row text:nth-of-type(2) {
+  text-align: right;
+}
+
+.yh-visits-rows {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  height: 60rpx !important;
+  line-height: 60rpx !important;
+  width: 196rpx;
+  border-radius: 33rpx !important;
+  margin: 0px;
+  font-size: 28rpx;
+}
+
+button:nth-of-type(1) {
+  border: 2rpx solid #49a0ff;
+  color: #49a0ff;
+  margin-right: 28rpx;
+}
+
+button:nth-of-type(2) {
+  background-color: #49a0ff !important;
+  color: #fff;
+}
+
+.yh-null {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.yh-null image {
+  width: 183rpx;
+  height: 240rpx;
+  display: block;
+  margin-top: 112rpx;
+}
+
+.yh-null text {
+  display: block;
+  margin-top: 36rpx;
+  color: #4d4d4d;
+}
+
+.yh-null button {
+  margin-top: 412rpx;
+  background-color: #49a0ff;
+  color: #fff;
+  width: 299rpx;
+  height: 81rpx !important;
+  line-height: 81rpx !important;
+  font-size: 36rpx;
+  border-radius: 40rpx !important;
+}

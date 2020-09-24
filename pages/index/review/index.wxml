@@ -1,0 +1,111 @@
+<!--pages/index/review/index.wxml-->
+<view class="yh-pre-top">伊好互联网医院（处方筏）</view>
+<view class="yh-pre-mast">
+  <view class="yh-review-row">{{list.empNo}}</view>
+  <view class="yh-review-row">
+    <view>姓名：
+      <text class="yh-review-text">{{list.name}}</text>
+    </view>
+    <view>性别：
+      <text class="yh-review-text">{{list.sex}}</text>
+    </view>
+    <view>年龄：
+      <text class="yh-review-text">{{list.age}}</text>
+    </view>
+  </view>
+  <view class="yh-review-row">
+    <view>费别：
+      <text class="yh-review-text">{{list.payingWay}}</text>
+    </view>
+  </view>
+  <view class="yh-review-row">
+    <view>门诊病历号：
+      <text class="yh-review-text">{{list.emrNo}}</text>
+    </view>
+  </view>
+  <view class="yh-review-row">
+    <view>初步诊断：
+      <text class="yh-review-text">{{list.diagnose}}</text>
+    </view>
+  </view>
+  <view class="yh-review-row">
+    <view>医生：
+      <text class="yh-review-text">{{list.doctorName}} · {{list.doctorTitle}}</text>
+    </view>
+    <view>科室：
+      <text class="yh-review-text">{{list.section}}</text>
+    </view>
+  </view>
+</view>
+<view class="yh-pre-mast">
+  <view class="yh-pre-row">
+    <view>既往史</view>
+    <view bindtap="showDialogBtn">{{list.pastMedicalRecord}}
+      <image class="yh-pre-img" src="{{imgServer}}icon-pre-1.png"></image>
+    </view>
+  </view>
+  <view class="yh-pre-row">
+    <view>过敏史</view>
+    <view>{{list.allergicRecord}}</view>
+  </view>
+</view>
+<view class="yh-pre-mast">
+  <view class="yh-review-row">指定药店：{{list.appoint}}</view>
+  <view class="yh-review-row">
+    <view class="yh-review-co">RP：</view>
+  </view>
+  <view class="yh-review-fo" wx:for="{{list.detail}}" wx:for-item="itemName">
+    <view class="yh-review-row">
+      <view class="yh-review-blo">{{itemName.name}}</view>
+      <view class="yh-review-blo">处方量：{{itemName.num}}</view>
+    </view>
+    <view class="yh-review-row">
+      <view>药品规格：
+        <text class="yh-review-text">{{itemName.specification}}</text>
+      </view>
+    </view>
+    <view class="yh-review-row">
+      <view class="yh-review-rov">
+        <view class="yh-review-fel">用法用量：</view>
+        <view class="yh-review-text yh-review-texts">~{{itemName.usage}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="yh-pre-mast yh-pre-mals">
+  <view class="yh-pre-row">
+    <view>医生签名</view>
+    <view class="yh-per-bn yh-per-bns">已签名</view>
+  </view>
+</view>
+<view class="yh-pre-mast yh-pre-mals">
+  <view class="yh-pre-row">
+    <view>复核药师签名</view>
+    <view class="yh-per-bn ">已签名</view>
+  </view>
+</view>
+<view class="yh-pre-mast yh-pre-mals">
+  <view class="yh-pre-row">
+    <view>配药药师签名</view>
+    <view class="yh-per-bn ">已签名</view>
+  </view>
+</view>
+<view class="yh-review-btn">
+  <button class="yh-pre-btn yh-pre-btns" bindtap="handleClick">复核失败</button>
+  <button class="yh-pre-btn" bindtap="handleSuss">复核通过</button>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">显示</view>
+  <view class="modal-content">
+    dddd
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">
+
+      取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data- status="confirm">确定</view>
+  </view>
+</view>

@@ -1,0 +1,161 @@
+/* pages/index/patients-edit/index.wxss */
+.yh-edit-main{
+  margin: 60rpx 28rpx;
+  box-shadow:0px 0px 4px 10rpx rgba(137, 137, 137, 0.05);
+  box-sizing: border-box;
+  padding: 28rpx 28rpx;
+  height: 733rpx;
+}
+.yh-edit-row{
+  width: 100%;
+  box-sizing: border-box;
+  height: 45rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rpx;
+  margin-bottom: 28rpx;
+  color: #4D4D4D;
+}
+view{
+  color: #4D4D4D;
+}
+.yh-edit-add{
+  text-align: center;
+  height: 45rpx;
+  width: 103rpx;
+  border-radius: 22rpx;
+  background-color: #49A0FF;
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 45rpx;
+}
+.yh-edit-col{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.yh-edit-pa{
+  height: 51rpx;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+  padding: 0px 20rpx;
+  color: #49A0FF;
+  border:2rpx solid #49A0FF;
+  font-size: 24rpx;
+  line-height: 51rpx;
+  border-radius: 5rpx;
+}
+.yh-edit-pa image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 16rpx;
+}
+button:not([size='mini']) {
+min-height: 0rpx;
+
+}
+.yh-edit-submit{
+  padding: 0rpx !important;
+  width: 299rpx !important;
+  height: 72rpx !important;
+  line-height: 72rpx !important;
+  background-color: #49A0FF;
+  color: #fff;
+  border-radius: 40rpx;
+  margin: 130rpx auto;
+  font-weight: normal;
+}
+/* 弹框 */
+
+/* 弹框 */
+.yh-modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+ 
+.yh-modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+ 
+.yh-modal-title {
+  padding-top: 50rpx;
+  font-size: 28rpx;
+  color: #808080;
+  text-align: center;
+}
+ 
+.yh-modal-content {
+  padding: 50rpx 32rpx;
+  padding-bottom: 20rpx;
+}
+ 
+.yh-modal-input {
+  color: #49A0FF;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+ 
+ .input-holder{
+   color: #D4D4DE;
+   font-weight: normal;
+   font-size: 24rpx;
+ }
+ .input{
+   background-color: transparent !important;
+ }
+.yh-modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  font-size: 34rpx;
+  line-height: 86rpx;
+  margin-top: 50rpx;
+}
+ 
+.yh-btn-cancel {
+  width: 50%;
+  color: #49a0ff;
+  text-align: center;
+  border:1px solid #49a0ff;
+  border-radius: 30rpx;
+  height: 67rpx;
+  line-height: 67rpx;
+  margin-right: 20rpx;
+}
+ 
+.yh-btn-confirm {
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  background-color: #49a0ff;
+  border-radius: 30rpx;
+  height: 67rpx;
+  line-height: 67rpx;
+  margin-left: 20rpx;
+}
+.yh-modal-inputs{
+  text-align: center;
+}

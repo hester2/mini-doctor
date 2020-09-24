@@ -1,0 +1,105 @@
+/* pages/index/prescription-details/index.wxss */
+
+.yh-presc-header {
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0px 0px 4px 4px rgba(137, 137, 137, 0.05);
+  box-sizing: border-box;
+  padding: 25rpx 59rpx;
+}
+
+.yh-presc-fle {
+  width: 138rpx;
+  height: 69rpx;
+  box-sizing: border-box;
+  padding: 0rpx 29rpx;
+  font-size: 22rpx;
+  color: #4d4d4d;
+  border: 1px solid #4d4d4d;
+  text-align: center;
+}
+
+.yh-presc-flc {
+  height: 69rpx;
+  color: #4d4d4d;
+  font-weight: bold;
+  width: 197rpx;
+  text-align: center;
+  margin-right: 75rpx;
+}
+
+.yh-presc-main {
+  margin: 25rpx 25rpx;
+  box-shadow: 0px 0px 4px 4px rgba(137, 137, 137, 0.05);
+  box-sizing: border-box;
+  padding: 28rpx 28rpx;
+  border-radius: 10rpx;
+}
+
+.yh-presc-desc {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #4d4d4d;
+  display: flex;
+  justify-content: space-between;
+}
+
+.yh-presc-left {
+  color: #4d4d4d;
+  display: flex;
+  align-items: center
+}
+
+.yh-presc-left text {
+  color: #b3b3b3;
+}
+
+.yh-presc-items {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  padding-bottom: 20rpx;
+}
+.yh-presc-items:last-of-type{
+  border-bottom: 0px solid #eee;
+}
+.yh-presc-size{
+  font-weight: bold;
+}
+.yh-presc-sizes{
+  font-weight: bold;
+  color: #49A0FF;
+  font-size: 46rpx;
+}
+.yh-presc-left .texts{
+  display: block;
+  height: 69rpx;
+  width: 497rpx;
+  line-height: 38rpx;
+  margin-top: 25rpx;
+}
+.yh-presc-descs{
+  margin-top: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+.yh-presc-col{
+  display: flex;
+  flex-direction: column;
+  color: #4D4D4D;
+  margin-top: 50rpx;
+}
+.yh-presc-title{
+  font-size: 22rpx;
+  color: #B3B3B3
+}
+.yh-presc-ga{
+  margin: 20rpx 30rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #4D4D4D
+}
+.yh-presc-ga text{
+  text-align: center
+}

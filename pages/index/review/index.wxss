@@ -1,0 +1,210 @@
+/* pages/index/review/index.wxss */
+button:not([size='mini']) {
+min-height: 0rpx;
+
+}
+
+.yh-pre-top {
+  width: 100%;
+  height: 86rpx;
+  box-shadow: 3rpx 3rpx 16rpx #f1f1f1;
+  color: #49a0ff;
+  box-sizing: border-box;
+  padding: 28rpx 56rpx;
+}
+
+.yh-pre-mast {
+  box-shadow: 0px 0px 12rpx #f1f1f1 ;
+  margin: 0px 28rpx;
+  border-radius: 20rpx;
+  margin-top: 28rpx;
+  box-sizing: border-box;
+  padding: 28rpx 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* border:2rpx solid #f1f1f1; */
+}
+.yh-review-row{
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  color: #4D4D4D;
+  margin-top: 25rpx;
+}
+.yh-review-text{
+  color: #B3B3B3;
+}
+.yh-pre-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 111rpx;
+  width: 100%;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.yh-pre-img {
+  width: 17rpx;
+  height: 29rpx;
+}
+
+.show-btn {
+  margin-top: 100rpx;
+  color: #2c2;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+.yh-review-co{
+  color: #49a0ff;
+  font-weight: bold;
+  font-size: 46rpx;
+}
+.yh-review-blo{
+  font-weight: bold;
+}
+.yh-review-rov{
+  display: flex;
+}
+.yh-review-fel{
+  width: 143rpx;
+  display: block;
+}
+.yh-review-texts{
+  width: 497rpx;
+  display: block;
+}
+.yh-review-fo{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding-bottom: 28rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.yh-review-fo:last-of-type{
+  border-bottom:0px solid #f1f1f1;
+  padding-bottom: 0px;
+}
+.yh-per-bn {
+  height: 44rpx;
+  width: 159rpx;
+  background-color: #49a0ff;
+  text-align: center;
+  line-height: 44rpx;
+  color: #fff;
+  border-radius: 22rpx;
+}
+.yh-per-bns{
+  background-color: transparent;
+  color: #49a0ff;
+  border:2rpx solid #49a0ff;
+}
+.yh-pre-row:last-of-type{
+  border-bottom:0px solid #ccc;
+}
+.yh-pre-mals{
+  padding: 0px 28rpx;
+}
+.yh-review-btn{
+  margin: 40rpx 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.yh-pre-btn{
+  padding: 0rpx;
+  width: 299rpx !important;
+  height:72rpx !important;
+  line-height: 72rpx !important;
+  color: #fff;
+  text-align: center;
+  margin: 40rpx auto;
+  background-color: #49A0FF !important;
+  border-radius: 40rpx;
+  font-weight: normal;
+}
+.yh-pre-btns{
+  background-color: transparent !important;
+  color: #49a0ff;
+  border:2rpx solid #49a0ff;
+  font-weight: normal
+}

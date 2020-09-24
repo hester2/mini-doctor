@@ -1,0 +1,202 @@
+<!--pages/index/Patients-details/index.wxml-->
+<view class='container'>
+  <view class="yh-chives-lp">
+    <view class="yh-chives-left" bindtap="handleGo">
+      <i-icon type="return" size="20" color="#4D4D4D" />
+    </view>
+    <view class="yh-chives-center">档案管理：{{answer.name}}</view>
+    <view class="yh-chives-right"></view>
+  </view>
+  <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!--Tab布局-->
+    <view class='yh-visits-title' id="grace-filter-header">
+      <view class="yh-visits-nav" class="{{0 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}}" bindtap='titleClick' data-idx='0'>
+        <text>基本信息</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{1 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}} yh-visits-nav" bindtap='titleClick' data-idx='1'>
+        <text>健康信息</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{2 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}}" bindtap='titleClick' data-idx='2'>
+        <text>病例信息</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{3 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}}" bindtap='titleClick' data-idx='3'>
+        <text>处方记录</text>
+        <hr class="line-style" />
+      </view>
+    </view>
+    <!--内容布局-->
+    <swiper bindchange='pagechange' current='{{currentIndex}}' style="height:{{filterHeight}}; width:100%" class='yh-swiper'>
+      <swiper-item class='yh-swiper'>
+        <view class="yh-chives-main">
+          <form bindsubmit="formSubmit" class="grace-form grace-margin-top">
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">头像</text>
+              <view class="grace-form-body">
+                <image src="{{answer.avatar}}"></image>
+                <!-- <image src="{{imgServer}}icon-archives_2.png"></image> -->
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">姓名</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled value="{{answer.name}}" placeholder=" "></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b ">
+              <text class="grace-form-label ">性别</text>
+              <view class="grace-form-body ">
+                <input type="text " placeholder-class="yh-holder " class="grace-form-input " name="nickname " disabled value="{{answer.sex}}" placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">年龄</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled value="{{answer.age}}" placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">联系方式</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled value="{{answer.phone}}" placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">婚姻状况</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled value="{{answer.maritalStatus}}" ></input>
+              </view>
+            </view>
+          </form>
+        </view>
+      </swiper-item>
+      <swiper-item class='yh-swiper' class='yh-swiper'>
+        <view class="yh-chives-main">
+          <form bindsubmit="formSubmits" class="grace-form grace-margin-top">
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">身高（cm）</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled value="{{answer_hz.height}}" placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">体重（kg）</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled  value="{{answer_hz.weight}}" placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">BML（kg/㎡）</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled  value="{{answer_hz.bmi}}"  placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">职业</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled  value="{{answer_hz.occupation}}"  placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">血型</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled  value="{{answer_hz.bloodType}}"  placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b" bindtap="handleHistory">
+              <text class="grace-form-label">既往史</text>
+              <view class="grace-form-body" bindtap="showDialogBtn">
+                {{answer_hz.pastMedicalHistory}}
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">过敏史</text>
+              <view class="grace-form-body">
+                {{answer_hz.allergicHistory}}
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">生育状况</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled  value="{{answer_hz.fertilityStatus}}"  placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">吸烟状况</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled  value="{{answer_hz.smokeStatus}}"  placeholder=""></input>
+              </view>
+            </view>
+            <view class="grace-form-item grace-border-b">
+              <text class="grace-form-label">饮酒状况</text>
+              <view class="grace-form-body">
+                <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" disabled  value="{{answer_hz.drinkStatus}}"  placeholder=""></input>
+              </view>
+            </view>
+          </form>
+        </view>
+      </swiper-item>
+      <swiper-item class='yh-swiper' class='yh-swiper'>
+        <view class="grace-card-view" wx:for="{{answer_bl}}" wx:key="index" bindtap="handleClick">
+          <view class="grace-card-body grace-border-b">
+            <view class="grace-card-desc">
+              <view class="grace-card-title">
+                <view>
+                  <text class="grace-card-name">{{item.firstName}}{{item.lastName}}</text>
+                  <text class="grace-card-name grace-text-small grace-blue">{{item.section}}</text>
+                </view>
+                <text class="text">{{item.orderNo}}</text>
+              </view>
+              <text class="grace-card-text">就诊医院：<text>{{item.organizationName}}</text></text>
+              <text class="grace-card-text">初步诊断：<text>{{item.diagnose}}</text></text>
+            </view>
+          </view>
+          <view class="grace-card-footer">
+            <text class="grace-icons grace-card-footer-item">{{item.realDate}}</text>
+            <view class="grace-icons grace-card-footer-item ko">
+              <view class="yh-icons">
+                <i-icon type="trash" size="20" color="#4DA2FF" />
+              </view>
+              删除</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='yh-swiper' class='yh-swiper'>
+        <view class="grace-card-view" wx:for="{{answer_cf}}" wx:key="index" bindtap="handlePresc">
+          <view class="grace-card-body grace-border-b">
+            <view class="grace-card-desc">
+              <view class="grace-card-title">
+                <view>
+                  <text class="grace-card-name">{{item.firstName}}{{item.lastName}}</text>
+                  <text class="grace-card-name grace-text-small grace-blue">{{item.section}}</text>
+                </view>
+                <text class="text">NO.248420261625</text>
+              </view>
+              <text class="grace-card-text">初步诊断：<text>{{item.diagnose}}</text></text>
+            </view>
+          </view>
+          <view class="grace-card-footer">
+            <text class="grace-icons grace-card-footer-item">{{item.realDate}}</text>
+            <view class="grace-icons grace-card-footer-item ko">
+              <view class="yh-icons">
+                <i-icon type="trash" size="20" color="#4DA2FF" />
+              </view>
+              删除</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </scroll-view>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">既往史</view>
+  <view class="modal-content">
+     糖尿病、高血压、冠心病、过敏性哮喘、
+心律失常、心肌梗塞
+  </view>
+  
+</view>

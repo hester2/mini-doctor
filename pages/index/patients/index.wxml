@@ -1,0 +1,170 @@
+<!--pages/index/patients/index.wxml-->
+<view class="yh-mast-title">
+  <view class="yh-mast-search" style="  background-image: url('https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-searchs_1.png');" hidden="{{hiden}}">
+    <input type="text" class="input" bindinput="searchChange" bindconfirm="searchNow" bindfocus="inputFocus" placeholder-class="yh-holder" confirm-type="search" placeholder="搜索" />
+  </view>
+  <view class="yh-mast-sear" hidden="{{hide}}">
+    <view class="yh-mast-search yh-mast-searchs" style="  background-image: url('https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-searchs_1.png');">
+      <input type="text" class="input" bindinput="searchChange" bindconfirm="searchNow" bindfocus="inputFocus" placeholder-class="yh-holders" confirm-type="search" placeholder="搜索" />
+    </view>
+    <view class="yh-mast-canc" bindtap="handleCancle">取消</view>
+  </view>
+</view>
+<!-- 内容开始区域  -->
+<view class="grace-body vf" hidden="{{hiddenName}}">
+  <view class="grace-list">
+    <view class="yh-mast-qm">
+      <text></text>
+      <text>搜索历史</text>
+      <view class="yh-mast-rg yh-mast-rg">
+        <i-icon type="trash" size="20" color="#4EA3FF" /> 删除
+      </view>
+    </view>
+    <view class="yh-mast-fl">
+      <view class="yh-mast-fo">直播讲堂</view>
+      <view class="yh-mast-fo">最新文章</view>
+      <view class="yh-mast-fo">在线问诊</view>
+      <view class="yh-mast-fo">咳嗽</view>
+      <view class="yh-mast-fo">感冒</view>
+      <view class="yh-mast-fo">厦门第一医院</view>
+    </view>
+    <view class="yh-mast-qm">
+      <text></text>
+      <text>搜索历史</text>
+      <view class="yh-mast-rg yh-mast-rg">
+      </view>
+    </view>
+    <view class="yh-mast-fl">
+      <view class="yh-mast-fo">附近医院</view>
+      <view class="yh-mast-fo">直播讲堂</view>
+      <view class="yh-mast-fo">会员服务</view>
+      <view class="yh-mast-fo">宫颈癌</view>
+    </view>
+  </view>
+</view>
+<view class="ot-f" hidden="{{hiddenHo}}">
+  <!-- yh filter start -->
+  <view class="yh-shade yh-shade-black" wx:if="{{showingIndex > 0}}" catchtap="closeAll" catchtouchmove="nomove"></view>
+  <view class="yh-filter" id="yh-filter-header">
+    <view class="items" bindtap='showOptions2'>
+      <view class="yh-mo">{{cateList[cateIndex]}}</view>
+    </view>
+    <view class="items" bindtap='showOptions1'>
+      <view class="yh-mo">{{department}}{{sname}}</view>
+      <image class="orderImg" src="{{imgServer}}icon-home_visits_1.png" wx:if="{{priceOrder1 == 1}}"></image>
+      <image class="orderImg" src="{{imgServer}}icon-home_visits_2.png" wx:if="{{priceOrder1 == 2}}"></image>
+    </view>
+    <view class="items" bindtap='showOptions0'>
+      <view class="yh-mo">{{areaSelectedStr}}</view>
+      <image class="orderImg" src="{{imgServer}}icon-home_visits_1.png" wx:if="{{priceOrder == 1}}"></image>
+      <image class="orderImg" src="{{imgServer}}icon-home_visits_2.png" wx:if="{{priceOrder == 2}}"></image>
+    </view>
+    <view class='yh-filter-options filter-panel' wx:if="{{showingIndex == 1}}">
+      <view class="filter-panel-left">
+        <view wx:for="{{filterdata.depart}}" wx:key="{{item.id}}" bindtap="setdepartIndex" data-departindex="{{index}}" data-departid="{{item.id}}" data-name="{{item.name}}" class="{{departindex==index?'active':''}}">{{item.name}}</view>
+      </view>
+      <view class="filter-panel-right">
+        <view wx:for="{{filterdata.depart[departindex].zone}}" wx:key="{{item.id}}" bindtap="setSubdepartIndex" data-subdepartindex="{{index}}" data-name="{{item.name}}" data-subdepartid="{{item.id}}" class="{{subdepartindex==index?'active':''}}">{{item.name}}</view>
+      </view>
+    </view>
+    <view class='yh-filter-options' wx:if="{{showingIndex == 3}}">
+      <view class="yh-visits-met">
+        <form bindsubmit="formSubmit_to">
+          <view class="modal-body">
+            <text class="yh-visits-title {{current == 0 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="0">{{provinceName}}</text>
+            <text class="yh-visits-title {{current == 1 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="1">{{cityName}}</text>
+            <text class="yh-visits-title {{current == 2 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="2">{{regionName}}</text>
+            <!-- <text class="yh-visits-title {{current == 3 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="3">{{townName}}</text> -->
+            <view class="yh-visits-divider"></view>
+            <swiper class="swiper-area" current="{{current}}" bindchange="currentChanged">
+              <block wx:if="{{province.length > 0}}">
+                <swiper-item>
+                  <scroll-view scroll-y="true" class="yh-visits-listview">
+                    <view wx:for="{{province}}" class="yh-visits-ma" wx:key="index" data-index="{{index}}" bindtap="provinceTapped">
+                      <text wx:if="{{index == provinceIndex}}" class="area-selected">{{item}}</text>
+                      <text wx:else>{{item}}</text>
+                    </view>
+                  </scroll-view>
+                </swiper-item>
+              </block>
+              <block wx:if="{{city.length > 0}}">
+                <swiper-item>
+                  <scroll-view scroll-y="true" class="yh-visits-listview">
+                    <view wx:for="{{city}}" class="yh-visits-ma" wx:key="index" data-index="{{index}}" bindtap="cityTapped">
+                      <text wx:if="{{index == cityIndex}}" class="area-selected">{{item}}</text>
+                      <text wx:else>{{item}}</text>
+                    </view>
+                  </scroll-view>
+                </swiper-item>
+              </block>
+              <block wx:if="{{region.length > 0}}">
+                <swiper-item>
+                  <scroll-view scroll-y="true" class="yh-visits-listview">
+                    <view wx:for="{{region}}" class="yh-visits-ma" wx:key="index" data-index="{{index}}" bindtap="regionTapped">
+                      <text wx:if="{{index == regionIndex}}" class="area-selected">{{item}}</text>
+                      <text wx:else>{{item}}</text>
+                    </view>
+                  </scroll-view>
+                </swiper-item>
+              </block>
+              <!-- <block wx:if="{{town.length > 0}}">
+                <swiper-item>
+                  <scroll-view scroll-y="true" class="yh-visits-listview">
+                    <view wx:for="{{town}}" class="yh-visits-ma" wx:key="index" data-index="{{index}}" bindtap="townTapped">
+                      <text wx:if="{{index == townIndex}}" class="area-selected">{{item}}</text>
+                      <text wx:else>{{item}}</text>
+                    </view>
+                  </scroll-view>
+                </swiper-item>
+              </block> -->
+            </swiper>
+          </view>
+        </form>
+      </view>
+    </view>
+    <!-- 筛选 end -->
+  </view>
+  <!-- yh filter end -->
+  <view style="margin-top:246rpx;"></view>
+  <view class="yh-family-main grace-card-view" wx:for="{{patients}}" wx:key="index">
+    <view class="grace-card-body grace-border-b">
+      <image src="{{item.avatar}}" bindtap="handleDetail" data-id="{{item.patientId}}"></image>
+      <view class="grace-card-desc">
+        <view class="grace-card-title">
+          <text class="grace-card-name">{{item.name}}</text>
+          <text class="grace-card-name grace-text-small grace-blue">{{item.sex=='0'?'女':'男'}}·{{item.age}}岁·{{item.ethnic}}·{{item.abode}}</text>
+        </view>
+        <view class="grace-card-text" >
+          <view class="yh-family-yel" wx:for="{{item.tips}}" wx:key="index" wx:for-item="itemName">{{itemName.tip}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="grace-card-footer">
+      <view class="grace-card-footer-s">{{item.createTime}}</view>
+      <view class="grace-card-footer-b">
+        <view>
+          <i-icon type="editor" size="18" color="#49A0FF" />
+          <text class="grace-card-footer-v" data-id="{{item.patientId}}" bindtap="handleEdit">编辑</text>
+        </view>
+        <view>
+          <i-icon type="trash" size="18" color="#49A0FF" />
+          <text class="grace-card-footer-v" bindtap="handleDel">删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="yh-modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="yh-modal-dialog" wx:if="{{showModal}}">
+  <view class="yh-modal-title">提示</view>
+  <view class="yh-modal-content">
+    <view class="yh-modal-input">
+      确认删除该患者？
+    </view>
+    <view class="yh-modal-footer">
+      <view class="yh-btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="yh-btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+  </view>
+</view>
+<view class="yh-pati-ma"> <image src="{{imgServer}}icon-figure_3.png"></image> </view>

@@ -1,0 +1,213 @@
+<view class='container'>
+  <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!--Tab布局-->
+    <view class='yh-visits-title' id="grace-filter-header">
+      <view class="yh-visits-nav" class="{{0 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}}" bindtap='titleClick' data-idx='0'>
+        <text>全部</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{1 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}} yh-visits-nav" bindtap='titleClick' data-idx='1'>
+        <text>待支付</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{2 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}}" bindtap='titleClick' data-idx='2'>
+        <text>问诊中</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{3 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}}" bindtap='titleClick' data-idx='3'>
+        <text>已完成</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{4 == currentIndex ? 'yh-title-sel-selected' : 'yh-title-sel'}}" bindtap='titleClick' data-idx='4'>
+        <text>评价/售后</text>
+        <hr class="line-style" />
+      </view>
+    </view>
+    <!--内容布局-->
+    <swiper bindchange='pagechange' current='{{currentIndex}}' style="height:{{filterHeight}}; width:100%" class='yh-swiper'>
+      <swiper-item class='yh-swiper' >
+        <view class='yh-visits-main' >
+          <view class="yh-visits-card" wx:for="{{order}}" wx:key="index">
+            <view class="yh-visits-text">￥{{item.price}} {{item.state}}</view>
+            <view class="yh-visits-items">
+              <view class="yh-visits-com">
+                <image src="{{item.patientInfo.avatar}}"></image>
+              </view>
+              <view class="yh-visits-coms">
+                <view class="yh-visits-lc">
+                  <text>{{item.patientInfo.name}}</text>
+                  <text class="yh-visits-titles"> {{item.patientInfo.tips}}</text>
+                </view>
+                <view class="yh-visits-le">
+                  <text>问诊科室：{{item.section}}</text>
+                  <!-- <text>三甲</text> -->
+                </view>
+                <view class="yh-visits-lr">
+                  病情：{{item.condition}}
+                </view>
+              </view>
+            </view>
+            <view class="yh-visits-row">
+              <text>{{item.type}}</text>
+              <text>{{item.realTime}}</text>
+            </view>
+            <view class="yh-visits-rows">
+              <button wx:if="{{item.stateType=='1'?true:false}}">{{item.stateType=="1"?'结束问诊':''}}</button>
+              <button wx:if="{{item.stateType=='2'?false:false}}"></button>
+              <button wx:if="{{item.stateType=='3'?true:false}}">{{item.stateType=="3"?'跟踪随访':''}}</button>
+              <button wx:if="{{item.stateType=='4'?true:false}}">{{item.stateType=="4"?'客服介入':''}}</button>
+              <button wx:if="{{item.stateType=='5'?true:false}}">{{item.stateType=="5"?'申诉':''}}</button>
+              <button wx:if="{{item.stateType=='6'?false:false}}"></button>
+              <button wx:if="{{item.stateType=='7'?false:false}}"></button>
+              <button wx:if="{{item.stateType=='8'?false:false}}"></button>
+
+               <button wx:if="{{item.stateType=='1'?true:false}}">{{item.stateType=="1"?'继续问诊':''}}</button>
+              <button wx:if="{{item.stateType=='2'?false:false}}"></button>
+              <button wx:if="{{item.stateType=='3'?false:false}}"></button>
+              <button wx:if="{{item.stateType=='4'?true:false}}">{{item.stateType=="4"?'同意退款':''}}</button>
+              <button wx:if="{{item.stateType=='5'?true:false}}">{{item.stateType=="5"?'查看详情':''}}</button>
+              <button wx:if="{{item.stateType=='6'?false:false}}"></button>
+              <button wx:if="{{item.stateType=='7'?false:false}}"></button>
+              <button wx:if="{{item.stateType=='8'?false:false}}"></button>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='yh-swiper' class='yh-swiper'>
+        <view class='yh-visits-main' >
+          <view class="yh-visits-card" wx:for="{{order}}" wx:key="index">
+            <view class="yh-visits-text">￥{{item.price}} {{item.state}}</view>
+            <view class="yh-visits-items">
+              <view class="yh-visits-com">
+                <image src="{{item.patientInfo.avatar}}"></image>
+              </view>
+              <view class="yh-visits-coms">
+                <view class="yh-visits-lc">
+                  <text>{{item.patientInfo.name}}</text>
+                  <text class="yh-visits-titles"> {{item.patientInfo.tips}}</text>
+                </view>
+                <view class="yh-visits-le">
+                  <text>问诊科室：{{item.section}}</text>
+                  <!-- <text>三甲</text> -->
+                </view>
+                <view class="yh-visits-lr">
+                  病情：{{item.condition}}
+                </view>
+              </view>
+            </view>
+            <view class="yh-visits-row">
+              <text>{{item.type}}</text>
+              <text>{{item.realTime}}</text>
+            </view>
+            <view class="yh-visits-rows">
+             
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='yh-swiper'  class='yh-swiper'>
+        <view class='yh-visits-main'>
+          <view class="yh-visits-card" wx:for="{{order}}" wx:key="index">
+            <view class="yh-visits-text">￥{{item.price}} {{item.state}}</view>
+            <view class="yh-visits-items">
+              <view class="yh-visits-com">
+                <image src="{{item.patientInfo.avatar}}"></image>
+              </view>
+              <view class="yh-visits-coms">
+                <view class="yh-visits-lc">
+                  <text>{{item.patientInfo.name}}</text>
+                  <text class="yh-visits-titles"> {{item.patientInfo.tips}}</text>
+                </view>
+                <view class="yh-visits-le">
+                  <text>问诊科室：{{item.section}}</text>
+                  <!-- <text>三甲</text> -->
+                </view>
+                <view class="yh-visits-lr">
+                  病情：{{item.condition}}
+                </view>
+              </view>
+            </view>
+            <view class="yh-visits-row">
+              <text>{{item.type}}</text>
+              <text>{{item.realTime}}</text>
+            </view>
+            <view class="yh-visits-rows">
+              <button>结束问诊</button>
+              <button>继续问诊</button>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='yh-swiper'  class='yh-swiper'>
+        <view class='yh-visits-main' >
+         <view class="yh-visits-card" wx:for="{{order}}" wx:key="index">
+            <view class="yh-visits-text">￥{{item.price}} {{item.state}}</view>
+            <view class="yh-visits-items">
+              <view class="yh-visits-com">
+                <image src="{{item.patientInfo.avatar}}"></image>
+              </view>
+              <view class="yh-visits-coms">
+                <view class="yh-visits-lc">
+                  <text>{{item.patientInfo.name}}</text>
+                  <text class="yh-visits-titles"> {{item.patientInfo.tips}}</text>
+                </view>
+                <view class="yh-visits-le">
+                  <text>问诊科室：{{item.section}}</text>
+                  <!-- <text>三甲</text> -->
+                </view>
+                <view class="yh-visits-lr">
+                  病情：{{item.condition}}
+                </view>
+              </view>
+            </view>
+            <view class="yh-visits-row">
+              <text>{{item.type}}</text>
+              <text>{{item.realTime}}</text>
+            </view>
+            <view class="yh-visits-rows">
+              <button>跟踪随访</button>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='yh-swiper'  class='yh-swiper'>
+        <view class='yh-visits-main'>
+<view class="yh-visits-card" wx:for="{{order}}" wx:key="index">
+            <view class="yh-visits-text">￥{{item.price}} {{item.state}}</view>
+            <view class="yh-visits-items">
+              <view class="yh-visits-com">
+                <image src="{{item.patientInfo.avatar}}"></image>
+              </view>
+              <view class="yh-visits-coms">
+                <view class="yh-visits-lc">
+                  <text>{{item.patientInfo.name}}</text>
+                  <text class="yh-visits-titles"> {{item.patientInfo.tips}}</text>
+                </view>
+                <view class="yh-visits-le">
+                  <text>问诊科室：{{item.section}}</text>
+                  <!-- <text>三甲</text> -->
+                </view>
+                <view class="yh-visits-lr">
+                  病情：{{item.condition}}
+                </view>
+              </view>
+            </view>
+            <view class="yh-visits-row">
+              <text>{{item.type}}</text>
+              <text>{{item.realTime}}</text>
+            </view>
+            <view class="yh-visits-rows">
+              <button>{{item.refundState=='1'?'客服介入':'投诉'}}</button>
+              <button>{{item.refundState=='1'?'同意退款':'查看详情'}}</button>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <view class="yh-null" wx:if="{{false}}">
+          <image src="../../../assets/icon-visits_1.png"></image>
+          <text>暂无订单</text>
+          <button>在线问诊</button>
+      </view>
+    </swiper>
+  </scroll-view>
+</view>

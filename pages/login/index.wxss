@@ -1,0 +1,217 @@
+page {
+  background: #fff;
+}
+
+.gn-login-logo {
+  margin: 110rpx 150rpx 249rpx 150rpx;
+  width: 446rpx;
+  height: 144rpx;
+}
+
+.gn-login-wrap {
+  margin: 127rpx 85rpx 0 85rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gn-avatar-wrap {
+  width: 158rpx;
+  height: 158rpx;
+  border: 1rpx solid #49a0ff;
+  border-radius: 50%;
+}
+
+input {
+  border: none;
+  background: #fff;
+}
+
+.gn-code-input {
+  width: 260rpx;
+}
+
+.gn-phone-input {
+  width: 500rpx;
+}
+
+.gn-enter-phone-number {
+  display: flex;
+  flex-direction: row;
+  align-items: cneter;
+  margin-bottom: 22rpx;
+  margin-top: 60rpx;
+}
+
+.gn-phone-name-icon {
+  width: 26rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+}
+
+.gn-phone-number-icon {
+  width: 27rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.gn-separation-line {
+  border-top: 3rpx solid #ddd;
+  width: 580rpx;
+  margin-top: 13rpx;
+}
+
+.gn-enter-verification-code {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 60rpx;
+}
+
+.gn-verification-code-icon {
+  width: 32rpx;
+  height: 25rpx;
+  margin-right: 20rpx;
+}
+
+.gn-login-sex {
+  display: flex;
+  align-items: center;
+  margin-top: 46rpx;
+  font-size: 32rpx;
+}
+
+.gn-login-sex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180rpx;
+  height: 64rpx;
+  background-color: #fff;
+  color: #49a0ff;
+  border-radius: 32rpx;
+  margin-left: 26rpx;
+  margin-right: 26rpx;
+  border: 1rpx solid #49a0ff;
+}
+
+.gn-sex-icon {
+  width: 20rpx;
+  height: 27rpx;
+  margin-right: 10rpx;
+}
+
+.gn-login-sex-item.gn-login-sex-item-active {
+  color: #fff;
+  background-color: #49a0ff;
+}
+button:not([size='mini']) {
+min-height: 0px;
+
+}
+
+.gn-get-code-button {
+  color: #fff;
+  background-color: #49a0ff;
+  border-radius: 10rpx;
+  white-space: nowrap;
+  width: 231rpx !important;
+  line-height: 37rpx;
+  height: 65rpx;
+  text-align: center;
+  margin-right: 10rpx;
+  padding-left: 17rpx;
+  padding-right: 17rpx;
+}
+
+.gn-login-button {
+  margin: 255rpx 221rpx 37rpx 221rpx;
+  width: 308rpx !important;
+  height: 82rpx !important;
+  border-radius: 41rpx;
+  background-color: #49a0ff;
+  font-family: Regular;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 53rpx !important;
+}
+
+.gn-read-terms-part {
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  margin: 37rpx auto 242rpx auto;
+}
+
+.gn-select-icon {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  margin-top: -3rpx;
+  margin-right: 12rpx;
+}
+
+.gn-noshow {
+  display: none;
+}
+
+.gn-terms-text {
+  font-family: Regular;
+  font-size: 28rpx;
+  color: #b3b3b3;
+  margin-left: 12rpx;
+}
+
+.gn-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.3;
+}
+
+.gn-modal-wrap {
+  width: 587rpx;
+  height: 720rpx;
+  background: #fff;
+  box-shadow: 0px 0px 4px 4px rgba(137, 137, 137, 0.05);
+  border-radius: 32rpx;
+  z-index: 9999;
+  position: fixed;
+  margin-left: 81rpx;
+  margin-right: 81rpx;
+  top: 192rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #49a0ff;
+  padding: 38rpx 0;
+}
+
+.gn-modal-title {
+  color: #49a0ff;
+  margin-bottom: 10rpx;
+}
+
+.gn-rules-content {
+  color: #000;
+}
+
+.gn-modal-button {
+  margin-top: 20rpx;
+  width: 189rpx;
+  height: 65rpx;
+  background: #49a0ff;
+  color: #fff;
+  text-align: center;
+  line-height: 65rpx;
+  border-radius: 32rpx;
+  box-shadow: 0px 0px 4px 4px rgba(137, 137, 137, 0.05);
+}

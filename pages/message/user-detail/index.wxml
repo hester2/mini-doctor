@@ -1,0 +1,75 @@
+<!--pages/message/user-detail/index.wxml-->
+<view class="container">
+  <view class="yh-mast-qm">
+    <text></text>
+    <text>患者信息</text>
+    <text></text>
+  </view>
+  <view class="yh-user-main">
+    <view>姓名：
+      <text class="yh-user-text">林兰芳</text>
+    </view>
+    <view>性别：
+      <text class="yh-user-text">女</text>
+    </view>
+    <view>年龄：
+      <text class="yh-user-text">34岁</text>
+    </view>
+  </view>
+  <view class="yh-mast-qm">
+    <text></text>
+    <text>病情描述</text>
+    <text></text>
+  </view>
+  <view class="yh-user-main-s ">
+    <view class="yh-cases-title-s ">怎么回事呢？而且每次都是头疼的想吐，浑身都是晕乎乎的状态，每天睡觉都有睡九个多小时，为什么还会有这种情况呢？</view>
+    <view class="yh-cases-phone ">
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+      <view class="yh-cases-phone-item ">
+        <image src="{{imgServer}}icon-cases_1.png "></image>
+      </view>
+    </view>
+  </view>
+  <view class="yh-mast-qm">
+    <text></text>
+    <text>就诊历史</text>
+    <text></text>
+  </view>
+  <view class="yh-user-main-s">
+    <view class="yh-cases-items ">
+      <view>就诊时间</view>
+      <view class="view ">2019-12-15
+      </view>
+    </view>
+    <view class="yh-cases-items ">
+      <view>就诊医院</view>
+      <view class="view ">厦门第一医院附属医院
+      </view>
+    </view>
+    <view class="yh-cases-items ">
+      <view>就诊科室</view>
+      <view class="view ">神经内科
+      </view>
+    </view>
+  </view>
+</view>

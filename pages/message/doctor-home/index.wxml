@@ -1,0 +1,107 @@
+<!--pages/message/doctor-home/index.wxml-->
+<view class="container">
+  <view class="yh-doctor-home" style="background-image: url('https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-mores_1.png');">
+    <view class="yh-doctor-main">
+      <view class="yh-doctor-left">
+        <image src="{{imgServer}}icon-doctor_1.png"></image>
+      </view>
+      <view class="yh-doctor-center">医生主页</view>
+      <view class="yh-doctor-right">
+        <image src="{{imgServer}}icon-doctor_2.png" bindtap="handleEdit"></image>
+        <image src="{{imgServer}}icon-doctor_3.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="yh-doctor-fp">
+    <view class="yh-mast-row">
+      <view class="icons">
+        <image src="{{doctor.avatar}}"></image>
+      </view>
+      <view class="yh-mast-col">
+        <view class="yh-mast-lc">
+          <text>{{doctor.firstName}}{{doctor.lastName}}</text>
+          <text class="yh-mast-titles"> {{doctor.section}} · {{doctor.title}}</text>
+        </view>
+        <view class="yh-mast-lo">
+          <i-cell-group>
+            <i-rate disabled="{{true}}" class="size" value="{{doctor.score}}">
+              {{doctor.score}}分
+            </i-rate>
+          </i-cell-group>
+        </view>
+        <view class="yh-mast-le">
+          <text>{{organization.name}}</text>
+          <text>{{organization.title}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="yh-doctor-card">
+      <view class="yh-doctor-col">
+        <image src="{{imgServer}}icon-doctor_6.png"></image>
+        <text>专业擅长</text>
+      </view>
+      <view class="yh-doctor-cols">{{doctorInfo.adept}}</view>
+    </view>
+    <view class="yh-doctor-card ">
+      <view class="yh-doctor-col">
+        <image src="{{imgServer}}icon-doctor_4.png"></image>
+        <text>医生简介</text>
+      </view>
+      <view class="yh-doctor-cols yh-doctor-hide {{isFold?'hide':'show'}}">{{doctorInfo.intro}}</view>
+    </view>
+    <image class="arrow" src="{{isFold?'https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-doctor_9.png':'https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-doctor_0.png'}}" bindtap="showAll"></image>
+  </view>
+  <view class="yh-mast-hom">
+    <view class="yh-mast-qm">
+      <text></text>
+      <text>医生服务</text>
+      <text></text>
+    </view>
+    <view class="yh-mast-grids">
+      <view class="yh-mast-item yh-mast-items" wx:for='{{service}}'  wx:key="item.id">
+        <image src="{{item.iconImg}}" mode="widthFix"></image>
+        <text class="text">{{item.head}}</text>
+        <text class="texts">{{item.subHead}}</text>
+      </view>
+    </view>
+    <view class="yh-mast-qm">
+      <text></text>
+      <text>医生再说</text>
+      <text></text>
+    </view>
+    <view class="yh-mast-grid ">
+      <view class="yh-mast-row">
+        <view class="icons">
+          <image src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=153086019,155710187&fm=26&gp=0.jpg"></image>
+        </view>
+        <view class="yh-mast-col">
+          <view class="yh-mast-lc">
+            尊敬的患者朋友，请大家问诊时根据页面提示尽量将情况描述清楚即可。我在看到后会及时联系您进行回复，感谢理解。
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="yh-mast-qm">
+      <text></text>
+      <text>问诊评价 <text class="text">（{{total}}）</text></text>
+      <text>更多</text>
+    </view>
+    <view class="yh-doctor-me" wx:for="{{common}}" wx:key="index">
+      <view class="yh-doctor-comlun">
+        <view class="yh-doctor-one">{{item.name}}</view>
+        <view class="yh-doctor-two">{{item.consultType}}</view>
+        <view class="yh-doctor-three">
+          <i-cell-group>
+            <i-rate disabled="{{true}}" class="size" value="{{item.commentScore}}">
+            </i-rate>
+          </i-cell-group>
+        </view>
+        <view class="yh-doctor-four">{{item.realDate}}</view>
+      </view>
+      <view class="yh-doctor-bot">
+        {{item.commentContent}}
+      </view>
+    </view>
+  </view>
+
+</view>

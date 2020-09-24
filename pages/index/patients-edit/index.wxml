@@ -1,0 +1,40 @@
+<!--pages/index/patients-edit/index.wxml-->
+<view class="yh-edit-main">
+  <view class="yh-edit-row">
+    <view>已添加</view>
+    <view class="yh-edit-add" bindtap="showDialogBtn">+添加</view>
+  </view>
+  <view class="yh-edit-col">
+    <view class="yh-edit-pa" wx:for="{{tip}}" wx:key="index">{{item.tip}}
+      <image src="{{imgServer}}icon-patients_edit-1.png" bindtap="handleDelete"></image>
+    </view>
+  </view>
+</view>
+<button class="yh-edit-submit" bindtap="handleClick">确定</button>
+<view class="yh-modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="yh-modal-dialog" wx:if="{{showModal}}">
+  <view class="yh-modal-title">添加</view>
+  <view class="yh-modal-content">
+    <view class="yh-modal-input">
+        <input type="text" class="input" placeholder-class="input-holder" placeholder="请输入" />
+    </view>
+    <view class="yh-modal-footer">
+      <view class="yh-btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="yh-btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+  </view>
+</view>
+<!-- 删除 -->
+<view class="yh-modal-mask" bindtap="hideModalCon" catchtouchmove="preventTouchMove" wx:if="{{showHide}}"></view>
+<view class="yh-modal-dialog" wx:if="{{showHide}}">
+  <view class="yh-modal-title">提示</view>
+  <view class="yh-modal-content">
+    <view class="yh-modal-input yh-modal-inputs">
+      确认删除该患者？
+    </view>
+    <view class="yh-modal-footer">
+      <view class="yh-btn-cancel" bindtap="onCancelDel" data-status="cancel">取消</view>
+      <view class="yh-btn-confirm" bindtap="onConfirmDel" data-status="confirm">确定</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#49A0FF",
+  "navigationBarTitleText": "患者管理",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index"
+  }
+}

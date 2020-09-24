@@ -1,0 +1,156 @@
+/* pages/message/index.wxss */
+
+.yh-mast-fh {
+  background-color: #49a0ff;
+  box-sizing: border-box;
+  padding: 0rpx 25rpx;
+  height: 160rpx;
+}
+
+.yh-mast-hl {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.yh-mast-title {
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+.yh-mast-icon {
+  width: 42%;
+   margin-top: 26rpx;
+   display: flex;
+   justify-content: flex-end;
+     position: relative;
+}
+.yh-mast-icon image{
+  margin-left: 47rpx;
+}
+.yh-mast-icon image:nth-of-type(1){
+  width: 35rpx;
+  height: 35rpx;
+}
+.yh-mast-icon image:nth-of-type(2){
+  width: 33rpx;
+  height: 39rpx;
+}
+.yh-mast-icon image:nth-of-type(3){
+  width: 42rpx;
+  height: 39rpx;
+}
+.yh-mast-icon .img{
+ position: absolute;
+ top: 0px;
+right: 84rpx;
+ z-index: 9999;
+ width: 16rpx;
+  height: 16rpx;
+}
+
+.yh-mast-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 25rpx;
+  box-sizing: border-box;
+  padding: 20rpx 25rpx;
+  border-radius: 10rpx;
+  margin-top: -75rpx;
+  background-color: #fff;
+  box-shadow: 1px 1px 12rpx #ccc;
+}
+
+.yh-mast-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2rpx solid #eee;
+  box-sizing: border-box;
+  padding: 20rpx 0px;
+}
+.yh-mast-item:last-of-type{
+  border-bottom: 0rpx solid #eee;
+}
+
+.yh-mast-item .icons {
+  flex: 1;
+  position: relative;
+}
+.yh-mast-item .icons .imgs {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+ z-index: 9999;
+ width: 16rpx;
+  height: 16rpx;
+}
+
+.yh-mast-item .icons image {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+
+
+.yh-mast-item .body {
+  flex: 11;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25rpx;
+}
+
+.yh-mast-item .title text:nth-of-type(1) {
+  font-size: 28rpx;
+}
+
+.yh-mast-item .title text:nth-of-type(2) {
+  font-size: 21rpx;
+  color: #49a0ff;
+  margin-left: 20rpx;
+}
+
+.yh-mast-item .titles {
+  font-size: 21rpx;
+  color: #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 48rpx;
+  height: 48rpx;
+  width: 360rpx;
+}
+
+.yh-mast-item .desc {
+  flex: 8;
+  font-size: 21rpx;
+  color: #ccc;
+  text-align: right;
+  height: 40rpx;
+line-height: 40rpx;
+}
+.yh-mast-scoll{
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #49a0ff;
+  font-size: 21rpx;
+  margin-top: 25rpx
+}
+
+._img{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    
+    filter: grayscale(100%);
+	
+    filter: gray;
+
+}
+
+._color{
+  color: #B3B3B3 !important;
+}

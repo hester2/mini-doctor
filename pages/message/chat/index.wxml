@@ -1,0 +1,113 @@
+<!--pages/chat/index.wxml-->
+<view class="container">
+  <view class="yh-mast-fh" id="grace-filter-header">
+    <view class="yh-mast-hl">
+      <view class="yh-mast-le" bindtap="handleClick">
+        <i-icon type="return" size="19" color="#fff"></i-icon>
+      </view>
+      <view class="yh-mast-title">
+        <text>王华建</text>
+        <text>耳鼻喉科·主任医师</text>
+      </view>
+      <!-- <view class="yh-mast-rg" bindtap="handleOut">结束问诊</view> -->
+    </view>
+  </view>
+  <view class="yh-mast-main" style="height:100%;">
+    <view class="yh-mast-grid">
+      <view class="body">
+        <text></text>
+        <text>问诊中</text>
+      </view>
+      <view class="title">
+        <text>21时48分</text>后结束问诊</view>
+    </view>
+    <scroll-view scroll-y="true" bindtap="handleHide" bindscroll="scroll" style="height:{{filterHeight}};">
+      <view class="yh-mast-body">
+        <view class="yh-mast-home" wx:for="{{doctor}}" wx:key="index">
+          <view class="view">{{item.createTime}}</view>
+          <!-- yonghu -->
+          <view class="yh-mast-chat" wx:if="{{item.point=='1'?true:false}}">
+            <view class="icons">
+              <image src="{{item.avatar}}" bindtap="handlePatients"></image>
+            </view>
+            <view class="title">
+              <text wx:if="{{item.contentType=='1'?true:false}}">{{item.content}}</text>
+              <image wx:if="{{item.contentType=='2'?true:false}}" src="{{item.img}}" data-src="{{imgs}}" mode="widthFix" bindtap="previewImage"></image>
+            </view>
+          </view>
+          <!-- 医生 -->
+          <view class="yh-mast-chat yh-mast-chats" wx:if="{{item.point=='0'?true:false}}">
+            <view class="title title-b">
+              <text wx:if="{{item.contentType=='1'?true:false}}">{{item.content}}</text>
+              <image wx:if="{{item.contentType=='2'?true:false}}" src="{{item.img}}" data-src="{{imgs}}" mode="widthFix" bindtap="previewImage"></image>
+            </view>
+            <view class="icons">
+              <image src="{{item.avatar}}" bindtap="handleHome"></image>
+            </view>
+          </view>
+        </view>
+        <!-- <view class="yh-mast-home">
+          <view class="view">2019-08-20 16:36</view>
+          <view class="yh-mast-chat">
+            <view class="title">
+              <view class="icons">
+                <image src="{{imgServer}}icon-message_90.png"></image>
+              </view>
+              <view class="desc">
+                <text>血糖周数据</text>
+                <text>患者：林兰芳</text>
+              </view>
+            </view>
+            <view class="icons">
+              <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3008142408,2229729459&fm=26&gp=0.jpg"></image>
+            </view>
+          </view>
+        </view> -->
+      </view>
+    </scroll-view>
+    <view class="yh-mast-mg">
+      <view class="yh-mast-row">
+        <view class="yh-mast-ft">
+          <image src="{{imgServer}}icon-message_8.png"></image>
+        </view>
+        <view class="yh-mast-fc">
+          <input type="text" placeholder="请输入您想说的话..." placeholder-class="yh-holder" />
+        </view>
+        <view class="yh-mast-fr">
+          <image src="{{imgServer}}icon-message_7.png" bindtap="handleChange"></image>
+          <image src="{{imgServer}}icon-message_6.png"></image>
+        </view>
+      </view>
+      <view class="yh-mast-bind" wx:if="{{isHide}}">
+        <view class="yh-mast-col" bindtap="handleUpload">
+          <view class="yh-mast-items">
+            <image src="{{imgServer}}icon-message_11.png"></image>
+          </view>
+          <text class="text">图片</text>
+        </view>
+        <view class="yh-mast-col" bindtap="handleMera">
+          <view class="yh-mast-items">
+            <image src="{{imgServer}}icon-message_10.png"></image>
+          </view>
+          <text class="text">拍摄</text>
+        </view>
+        <view class="yh-mast-col">
+          <view class="yh-mast-items">
+            <image src="{{imgServer}}icon-message_12.png"></image>
+          </view>
+          <text class="text">健康商城</text>
+        </view>
+        <view class="yh-mast-col" bindtap="handlePre">
+          <view class="yh-mast-items">
+            <image src="{{imgServer}}icon-message_13.png"></image>
+          </view>
+          <text class="text">开处方</text>
+        </view>
+      </view>
+    </view>
+  </view>
+    <i-modal visible="{{ visible2 }}" bind:ok="handleClose2" bind:cancel="handleClose2">
+    <view>提示</view>
+    <view class="yh-mast-color">您确定要结束问诊吗？</view>
+  </i-modal>
+</view>

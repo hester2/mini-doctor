@@ -1,0 +1,37 @@
+<!--pages/message/index.wxml-->
+<view class="container">
+  <view class="yh-mast-fh">
+    <view class="yh-mast-hl">
+      <text class="yh-mast-title">问诊消息</text>
+      <view class="yh-mast-icon">
+        <image src="{{imgServer}}icon-message_2.png"></image>
+        <image src="{{imgServer}}icon-message_3.png"></image>
+        <image src="{{imgServer}}icon-message_5.png"></image>
+        <image class="img" src="{{imgServer}}icon-message_4.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="yh-mast-grid">
+    <view class="yh-mast-item" wx:for="{{message}}" wx:key="index" data-id="{{item.id}}" data-idx="{{item.patientInfo.id}}" data-name="{{item.patientInfo}}" bindtap="handleClick">
+      <view class="icons">
+        <image src="{{item.patientInfo.avatar}}" class="{{item.consultInfo.state=='-1'?'_img':''}}"></image>
+        <image class="imgs" wx:if="{{item.consultInfo.newMsg=='0'?false:true}}" src="{{imgServer}}icon-message_4.png"></image>
+      </view>
+      <view class="body">
+        <view class="title">
+          <text class="{{item.consultInfo.state=='-1'?'_color':''}}">{{item.patientInfo.name}}</text>
+          <text class="{{item.consultInfo.state=='-1'?'_color':''}}">
+          {{item.patientInfo.age=='1'?'男':'女'}} · {{item.patientInfo.age}} · {{item.patientInfo.abode}}</text>
+        </view>
+        <view class="titles">
+          {{item.consultInfo.newMsgVal}}
+        </view>
+      </view>
+      <view class="desc">
+        {{item.consultInfo.lastConsultTime}}
+      </view>
+    </view>
+
+    <!-- <view class="yh-mast-scoll">点击加载更多</view> -->
+  </view>
+</view>

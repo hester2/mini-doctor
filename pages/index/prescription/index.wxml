@@ -1,0 +1,177 @@
+<!--pages/index/prescription/index.wxml-->
+<view class="yh-pre-top">伊好互联网医院（处方筏）</view>
+<form bindsubmit="formSubmit" class="grace-form grace-margin-top">
+  <view class="yh-pre-num">{{answer.orderNo}}</view>
+  <view class="yh-pre-mast">
+    <view class="yh-pre-row">
+      <view>患者姓名</view>
+      <view>{{answer.name}}</view>
+    </view>
+    <view class="yh-pre-row">
+      <view>患者性别</view>
+      <view>{{answer.sex=='0'?'女':'男'}}</view>
+    </view>
+    <view class="yh-pre-row">
+      <view>患者年龄</view>
+      <view>{{answer.age}}岁</view>
+    </view>
+    <view class="yh-pre-row">
+      <view class="grace-form-item">
+        <text class="grace-form-label">费别</text>
+        <view class="grace-form-body">
+          <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="payingWay" disabled value="{{answer.payingWay}}" placeholder=""></input>
+        </view>
+      </view>
+    </view>
+    <view class="yh-pre-row">
+      <view>门诊病历号</view>
+      <view>{{answer.emrNo}}</view>
+    </view>
+    <view class="yh-pre-row">
+      <view>既往史</view>
+      <view bindtap="showDialogBtn">{{answer.pastMedicalHistory}}
+        <image class="yh-pre-img" src="{{imgServer}}icon-pre-1.png"></image>
+      </view>
+    </view>
+    <view class="yh-pre-row">
+      <view>过敏史</view>
+      <view>{{answer.allergicHistory}}</view>
+    </view>
+  </view>
+  <view class="yh-pre-mast yh-pre-mall">
+    <view class="yh-pre-num yh-pre-nus">初步诊断</view>
+    <view class="yh-evalu-tex">
+      <textarea placeholder-class="place-holder" placeholder-style="line-height: 50rpx;" placeholder="病情初步诊断结果 " name="introduction" maxlength='300' bindinput='limit' value="{{text}}" style="font-size: 14px;" />
+      <text>{{current}} / {{max}}</text>
+    </view>
+  </view>
+  <view class="yh-pre-mast yh-pre-mals">
+    <view class="yh-pre-row">
+      <view class="grace-form-item">
+        <text class="grace-form-label">医生</text>
+        <view class="grace-form-body">
+          <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" placeholder="请输入真实姓名"></input>
+        </view>
+      </view>
+    </view>
+    <view class="yh-pre-row">
+      <view class="grace-form-item">
+        <text class="grace-form-label">科室</text>
+        <view class="grace-form-body">
+          <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="nickname" placeholder="请输入"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="yh-pre-mast yh-pre-mall">
+    <view class="yh-pre-row">
+      <view class="grace-form-item ">
+        <text class="grace-form-label">处方类型</text>
+        <view class="grace-form-body">
+          <!-- <picker class="grace-form-picker" bindchange="bindPickerChange" :value="pharmacyIndex" :range="pharmacy" name="pharmacy">
+            <text class="grace-text">{{pharmacy[pharmacyIndex]}}</text>
+            <image class="yh-pre-img yh-pre-imgs" src="{{imgServer}}icon-pre-1.png"></image>
+          </picker> -->
+          <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="prescriptionType" placeholder="请输入"></input>
+        </view>
+      </view>
+    </view>
+    <view class="yh-pre-row">
+      <view class="grace-form-item">
+        <text class="grace-form-label">指定药店</text>
+        <view class="grace-form-body">
+          <!-- <picker class="grace-form-picker" bindchange="bindPickerMedicine" :value="medicineIndex" :range="medicine" name="medicine">
+            <text class="grace-text">{{medicine[medicineIndex]}}</text>
+            <image class="yh-pre-img yh-pre-imgs" src="{{imgServer}}icon-pre-1.png"></image>
+          </picker> -->
+          <input type="text" placeholder-class="yh-holder" class="grace-form-input" name="appoint" placeholder="请输入"></input>
+        </view>
+      </view>
+    </view>
+    <view class="yh-pre-row">
+      <view class="yh-per-br">RP</view>
+      <view class="yh-per-bn">+添加药品</view>
+    </view>
+    <view class="yh-pre-row yh-pre-rowd">
+      <view class="yh-pre-left">
+        <image src="{{imgServer}}icon-pre-2.png"></image>
+      </view>
+      <view class="yh-pre-center">
+        <view class="yh-pre-centers">
+          <view class="yh-pre-blod">阿莫西林胶囊</view>
+          <view class="yh-pre-we">
+            <view class='stepper'>
+              <text class='{{minusStatus}}' type='number' bindtap='bindMinus'>-</text>
+              <input bindinput='bindManual' value='{{num}}'></input>
+              <text bindtap='bindPlus'>+</text>
+            </view>
+          </view>
+        </view>
+        <view class="yh-pre-centers">
+          <view>药品规格：</view>
+          <view class="yh-pre-we">
+            0.5g*24粒
+          </view>
+        </view>
+        <view class="yh-pre-centers">
+          <view>用法用量：</view>
+          <view class="yh-pre-we yh-pre-wes">
+            饭后半小时口服，成人一次 一粒，每6~8小时1次
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="yh-pre-row yh-pre-rowd">
+      <view class="yh-pre-left">
+        <image src="{{imgServer}}icon-pre-2.png"></image>
+      </view>
+      <view class="yh-pre-center">
+        <view class="yh-pre-centers">
+          <view class="yh-pre-blod">阿莫西林胶囊</view>
+          <view class="yh-pre-we">
+            <view class='stepper'>
+              <text class='{{minusStatus}}' type='number' bindtap='bindMinus'>-</text>
+              <input bindinput='bindManual' value='{{num}}'></input>
+              <text bindtap='bindPlus'>+</text>
+            </view>
+          </view>
+        </view>
+        <view class="yh-pre-centers">
+          <view>药品规格：</view>
+          <view class="yh-pre-we">
+            0.5g*24粒
+          </view>
+        </view>
+        <view class="yh-pre-centers">
+          <view>用法用量：</view>
+          <view class="yh-pre-we yh-pre-wes">
+            饭后半小时口服，成人一次 一粒，每6~8小时1次
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="yh-pre-mast yh-pre-mals">
+    <view class="yh-pre-row">
+      <view>医生签名</view>
+      <image class="imgsder" wx:if="{{answer.doctorSign=='1'?true:false}}" src="{{answer.doctorSignImg}}" ></image>
+      <view class="yh-per-bn" wx:if="{{answer.doctorSign=='0'?true:false}}">去签名</view>
+      <view class="yh-per-bn" wx:if="{{answer.doctorSign=='1'?true:false}}">已签名</view>
+    </view>
+  </view>
+  <button class="yh-pre-btn" formType="submit" bindtap="handleClick">提交复核</button>
+</form>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">显示</view>
+  <view class="modal-content">
+    dddd
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">
+
+      取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data- status="confirm">确定</view>
+  </view>
+</view>

@@ -1,0 +1,148 @@
+/* pages/index/cases-details/index.wxss */
+.yh-cases-main{
+  margin: 28rpx 28rpx;
+  box-sizing: border-box;
+  padding: 25rpx 25rpx;
+  box-shadow: 0px 0px 4px 4px rgba(137, 137, 137, 0.05);
+  border-radius: 10rpx;
+}
+.yh-cases-hl{
+  color: #4D4D4D;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between
+}
+.yh-cases-left,.yh-cases-right{
+  height: 100%;
+  line-height: 80rpx;
+}
+.yh-cases-left text{
+  color: #B3B3B3
+}
+.yh-cases-right text{
+  color: #B3B3B3
+}
+.yh-cases-items{
+  border-bottom:1px solid #F7F7F7;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 25rpx 0px
+}
+.yh-cases-items view{
+  color: #4D4D4D
+}
+.yh-cases-items .view{
+  color: #B3B3B3;
+}
+.yh-cases-items:last-of-type{
+  border-bottom: 0px solid #4D4D4D
+}
+.yh-cases-main-b{
+  padding: 0px 25rpx;
+}
+.yh-cases-title{
+  color: #4D4D4D;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.yh-cases-title-s{
+  color: #B3B3B3;
+   margin-bottom: 25rpx;
+}
+.yh-cases-phone{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.yh-cases-phone-item{
+  width: 22.2%;
+  height: 135rpx;
+  margin-right:25rpx; 
+}
+.yh-cases-phone-item:nth-of-type(4){
+  margin-right: 0rpx;
+}
+.yh-cases-phone-item:nth-of-type(8){
+  margin-right: 0rpx;
+}
+.yh-cases-phone-item image{
+  width: 100%;
+  height: 100%;
+}
+.yh-cases-title text{
+  color: #B3B3B3
+}
+.yh-cases-title-c{
+  display: flex;
+  justify-content: space-between;
+  color: #4D4D4D
+}
+.yh-cases-title-c text:nth-of-type(2){
+  background-color: #49A0FF;
+  color: #fff;
+  border-radius: 25rpx;
+  box-sizing: border-box;
+  padding: 5rpx 20rpx;
+}
+/*  */
+ 
+.yh-modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+ 
+.yh-modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+ 
+.yh-modal-title {
+  padding-top: 50rpx;
+  color: #808080;
+  text-align: center;
+}
+ 
+.yh-modal-content {
+  padding: 50rpx 32rpx;
+  color: #B3B3B3
+}
+ 
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+ 
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+ 
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

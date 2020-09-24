@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#49A0FF",
+  "navigationBarTitleText": "多点执业备案",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+        "i-radio-group": "../../dist/radio-group/index",
+        "i-radio": "../../dist/radio/index"
+  }
+}

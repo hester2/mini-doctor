@@ -1,0 +1,6 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+ <view class="yh-index-cl">伊好-互联网医院</view>
+ <image class="yh-index-img" src="{{imgServer}}icon-guide-1.png"></image>
+ <button class="yh-index-btn" bindtap="handleClick">马上体验</button>
+</view>

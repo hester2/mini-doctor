@@ -1,0 +1,125 @@
+<!--pages/myHome/index.wxml-->
+<view class="gn-page">
+  <view class="yh-more-header" style="background-image: url('https://health-mini-1255700284.cos.ap-chengdu.myqcloud.com/consultation/assets/icon-mores_1.png');">
+    <view class="yh-more-setup">
+      <i-icon class="yh-more-icon" bindtap="handleMessage" type="remind" size="23" color="#fff" />
+      <i-icon class="yh-more-icon" bindtap="handleSetup" type="setup" size="23" color="#fff" />
+    </view>
+    <view class="gn-more-header">
+      <view class="gn-more-header-name-wrap" bindtap="goToInfoDetail">
+        <image class="gn-header-user-photo" src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+        <view class="yh-more-user">
+          <text class="gn-header-user-name gn-app-fs46">{{userInfo.name}}</text>
+          <text>{{loginStates}}</text>
+        </view>
+      </view>
+      <view class="gn-header-info" bindtap="getWeather">
+        <text class="gn-app-fs62 gn-weather-content">{{weather.temperature}}</text>
+        <view class="gn-header-info-date-wrap">
+          <text class="gn-app-fs24 gn-header-info-date">{{weather.weather}}</text>
+          <text class="gn-app-fs24 gn-header-info-city">{{weather.city}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="yh-mast-hom yh-more-margin">
+      <view class="yh-mast-grid">
+        <view class="yh-mast-item" bindtap="handleCard">
+          <text>--</text>
+          <text>卡卷</text>
+        </view>
+        <view class="yh-mast-item" bindtap="handleColle">
+          <text>--</text>
+          <text>我的星币</text>
+        </view>
+        <view class="yh-mast-item">
+          <text>--</text>
+          <text>余额</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <image src="{{imgBg}}" mode="aspectFit" class="gn-header-bg"></image> -->
+  <view class="gn-more-login-wrap">
+    <view class="gn-login">
+      <text class="gn-app-fs28 gn-login-text1">已经连续登陆<text class="gn-login-text2"> {{loginData.loginDay}}</text> 天</text>
+      <view class="gn-login-history-wrap">
+        <view class="gn-login-history-item">
+          <image src="{{imgLoad}}" mode="aspectFit" class="gn-load-icon" wx:if="{{loginData.weekLogin[0]}}"></image>
+          <image src="{{imgUnload}}" mode="aspectFit" class="gn-load-icon" wx:if="{{!loginData.weekLogin[0]}}"></image>
+          <text class="gn-app-fs20 gn-load-date">周一</text>
+        </view>
+        <view class="gn-login-history-item">
+          <image src="{{imgLoad}}" mode="aspectFit" class="gn-load-icon" wx:if="{{loginData.weekLogin[1]}}"></image>
+          <image src="{{imgUnload}}" mode="aspectFit" class="gn-load-icon" wx:if="{{!loginData.weekLogin[1]}}"></image>
+          <text class="gn-app-fs20 gn-load-date">周二</text>
+        </view>
+        <view class="gn-login-history-item">
+          <image src="{{imgLoad}}" mode="aspectFit" class="gn-load-icon" wx:if="{{loginData.weekLogin[2]}}"></image>
+          <image src="{{imgUnload}}" mode="aspectFit" class="gn-load-icon" wx:if="{{!loginData.weekLogin[2]}}"></image>
+          <text class="gn-app-fs20 gn-load-date">周三</text>
+        </view>
+        <view class="gn-login-history-item">
+          <image src="{{imgLoad}}" mode="aspectFit" class="gn-load-icon" wx:if="{{loginData.weekLogin[3]}}"></image>
+          <image src="{{imgUnload}}" mode="aspectFit" class="gn-load-icon" wx:if="{{!loginData.weekLogin[3]}}"></image>
+          <text class="gn-app-fs20 gn-load-date">周四</text>
+        </view>
+        <view class="gn-login-history-item">
+          <image src="{{imgLoad}}" mode="aspectFit" class="gn-load-icon" wx:if="{{loginData.weekLogin[4]}}"></image>
+          <image src="{{imgUnload}}" mode="aspectFit" class="gn-load-icon" wx:if="{{!loginData.weekLogin[4]}}"></image>
+          <text class="gn-app-fs20 gn-load-date">周五</text>
+        </view>
+        <view class="gn-login-history-item">
+          <image src="{{imgLoad}}" mode="aspectFit" class="gn-load-icon" wx:if="{{loginData.weekLogin[5]}}"></image>
+          <image src="{{imgUnload}}" mode="aspectFit" class="gn-load-icon" wx:if="{{!loginData.weekLogin[5]}}"></image>
+          <text class="gn-app-fs20 gn-load-date">周六</text>
+        </view>
+        <view class="gn-login-history-item" style="margin-right: 0;">
+          <image src="{{imgLoad}}" mode="aspectFit" class="gn-load-icon" wx:if="{{loginData.weekLogin[6]}}"></image>
+          <image src="{{imgUnload}}" mode="aspectFit" class="gn-load-icon" wx:if="{{!loginData.weekLogin[6]}}"></image>
+          <text class="gn-app-fs20 gn-load-date">周日</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="yh-mast-hom">
+    <view class="yh-mast-qm">
+      <text></text>
+      <text>档案管理</text>
+      <text></text>
+    </view>
+    <view class="yh-mast-grid yh-mast-column">
+      <view class="yh-mast-item yh-column-items" bindtap="handleBsic">
+        <view class="text">
+          <image src="{{imgServer}}icon-mores_1.png" mode="aspectFit" class="gn-item-icon"></image>
+        </view>
+        <view class="text">个人资料</view>
+        <view class="text">
+          <image src="{{imgRight}}" mode="aspectFit" class="gn-item-right-icon"></image>
+        </view>
+      </view>
+      <view class="yh-mast-item yh-column-items" bindtap="handleHealth">
+        <view class="text">
+          <image src="{{imgServer}}icon-mores_2.png" mode="aspectFit" class="gn-item-icon"></image>
+        </view>
+        <view class="text">医师认证</view>
+        <view class="text">
+          <image src="{{imgRight}}" mode="aspectFit" class="gn-item-right-icon"></image>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+</view>
+  <!--确定登录遮罩 -->
+  <view>
+    <view bindtap="hideModal" class="gn-mask" wx:if="{{loginModal}}"></view>
+    <view class="gn-more-login" wx:if="{{loginModal}}">
+      <view class="gn-modal-title  gn-app-fs46">提示</view>
+      <view class="gn-modal-content  gn-app-fs28">您还未登陆，请先进行登陆以获得更好的服务体验。</view>
+      <view class="gn-modal-buttons">
+        <button class="gn-modal-button" hover-class="none" bindtap="hideModal">取消</button>
+        <button class="gn-modal-button" hover-class="none" open-type="getUserInfo" bindgetuserinfo="getUserInfo">确定</button>
+      </view>
+    </view>
+  </view>

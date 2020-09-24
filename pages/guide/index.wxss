@@ -1,0 +1,36 @@
+/* pages/index/index.wxss */
+button:not([size='mini']) {
+min-height: 0rpx;
+width: 0px;
+margin-left: 0;
+margin-right: 0;
+
+}
+.container{
+  display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.yh-index-cl{
+  color:#49A0FF;
+  font-size: 46rpx;
+  margin: 50rpx 0px;
+}
+.yh-index-img{
+  width: 608rpx;
+  height: 589rpx;
+}
+.yh-index-btn{
+  padding: 0rpx;
+  margin-top: 186rpx;
+  width:  300rpx !important;
+  height:72rpx !important;
+  line-height: 72rpx !important;
+  color: #49A0FF;
+  border-radius: 40rpx;
+  border:2rpx solid #49A0FF;
+  text-align: center;
+}
+
+

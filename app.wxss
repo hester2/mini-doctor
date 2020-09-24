@@ -1,0 +1,104 @@
+/**app.wxss**/
+@import "./common/graceUI.wxss";
+@import "./common/graceIcons.wxss";
+view{
+  font-size: 28rpx;
+}
+image{
+  height: 60rpx;
+  width: 60rpx
+}
+button{
+  font-weight: normal !important;
+  font-size: 28rpx !important;
+}
+.container{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%
+}
+page {
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 750rpx;
+  overflow-x: hidden;
+}
+
+
+.gn-page-container {
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+}
+
+.gn-page-text {
+  margin-left: 36rpx;
+  margin-right: 36rpx;
+}
+
+/**gn-font 外部字体没有引入**/
+
+.gn-app-fs86 {
+  font-size: 86rpx;
+}
+
+.gn-app-fs60 {
+  font-size: 60rpx;
+}
+
+.gn-app-fs46 {
+  font-size: 46rpx;
+}
+
+.gn-app-fs40 {
+  font-size: 40rpx;
+}
+
+.gn-app-fs36 {
+  font-size: 36rpx;
+}
+
+.gn-app-fs28 {
+  font-size: 28rpx;
+}
+
+.gn-app-fs24 {
+  font-size: 24rpx;
+}
+
+.gn-app-fs22 {
+  font-size: 22rpx;
+}
+
+.gn-app-fs20 {
+  font-size: 20rpx;
+}
+
+/**gn-cneter 使用 flex 完美居中**/
+
+.gn-app-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gn-app-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-placeholder {
+  color: #d4d4de;
+  font-size: 32rpx;
+}
+
+input {
+  padding-left: 24rpx;
+  
+  background: #f2f2f2;
+  border-radius: 10rpx;
+  letter-spacing: 0rpx;
+}
+
+.gn-app-placeholder {
+  color: #d4d4de;
+}

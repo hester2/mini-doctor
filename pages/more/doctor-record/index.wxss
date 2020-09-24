@@ -1,0 +1,292 @@
+/* pages/more/doctor-record/index.wxss */
+.container{
+  width: 100%;
+  margin: 28rpx 0px;
+  box-sizing: border-box;
+  padding: 0px 30rpx;
+}
+.yh-record-title{
+  color: #49A0FF;
+
+}
+
+.yh-cation-main{
+  margin-top: 20rpx;
+  box-shadow: 0px 0px 4px 4px rgba(137, 137, 137, 0.05);
+  box-sizing: border-box;
+  padding: 28rpx 28rpx;
+}
+
+.word-class{
+
+  font-size: 14px;
+
+  color: rgb(95, 87, 87);
+
+}
+
+/* 选择图片 */
+
+.img_box{
+
+  width:100%;
+
+  position:relative;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  margin:0 auto;
+
+  padding-top: 20px;
+
+}
+
+.imgs{
+
+  width:25%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom:20rpx;
+  position: relative;
+}
+.imgs .text{
+  width: 80%;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 22rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+}
+
+.imgs image{
+
+  width:135rpx;
+
+  height: 135rpx;
+
+  border:1px solid rgba(214, 212, 212, 0.1);
+
+}
+
+.imgs .images{
+
+  position:relative;
+
+}
+
+.images button{
+
+  width:100%;
+
+  height:100%;
+
+  position:absolute;
+
+  top:0;
+
+  left:0;
+
+}
+
+.img_box .images{
+
+  width:135rpx;
+
+height: 135rpx;
+
+
+  border-radius:4rpx;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.img_box .images>image{
+
+  width: 100%;
+  height: 100%
+
+}
+
+/* 上传按钮 */
+
+.UploadBtnarea{
+
+  width: 100%;
+
+  height: 32px;
+
+  margin-top: 30px;
+
+  margin-bottom: 10px;
+
+}
+
+.UploadBtnclass{
+
+  height: 100%;
+
+  width: 30%;
+
+  background-color: #49A0FF;
+
+  color: white;
+
+  align-self: center;
+
+  font-size: 13px;
+
+  border-radius: 60rpx;
+
+  margin-top: 500rpx;
+
+}
+.imgs:nth-of-type(3){
+  /* margin-left: 131rpx; */
+}
+/* 资格证 */
+.yh-figure-photo{
+  display: flex;
+    flex-flow:row wrap;
+  justify-content: flex-start;
+  margin-top: 25rpx;
+}
+.yh-figure-left{
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 137rpx;
+  margin-right: 25rpx;
+  margin-bottom: 25rpx;
+  position: relative;
+}
+.yh-figure-left:nth-of-type(4){
+  margin-right:0rpx;
+}
+.yh-figure-left:nth-of-type(8){
+  margin-right:0rpx;
+}
+.yh-figure-right{
+  flex: 9;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 137rpx;
+}
+.yh-figure-left image{
+  width: 137rpx;
+  height: 137rpx;
+}
+.yh-figure-right text:nth-of-type(1){
+  color: #4D4D4D;
+  text-align: left
+}
+.yh-figure-right text:nth-of-type(2){
+  color: #B3B3B3;
+  text-align: left;
+  margin-top: 10rpx;
+}
+.ot-tem-del{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40rpx !important;
+  height: 40rpx !important;
+}
+.yh-figure-hj{
+  display: flex;
+  justify-content: space-between
+}
+.yh-figure-hr{
+ color: #4D4D4D;
+ height: 45rpx;
+  line-height: 45rpx;
+}
+.yh-figure-hl{
+  display: flex;
+}
+.yh-figure-btn{
+  height: 45rpx;
+  line-height: 45rpx;
+  width: 103rpx;
+  border:1px solid #49A0FF;
+  color: #49A0FF;
+  border-radius: 18rpx;
+  text-align: center;
+  margin-left: 20rpx;
+}
+.active{
+  background-color: #49A0FF;
+  color: #fff;
+}
+.yh-figure-items{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 40rpx 0px;
+}
+.yh-figure-items .section__title{
+  color: #4D4D4D;
+}
+.yh-figure-items .picker{
+  color: #4D4D4D;
+  font-size: 25rpx;
+}
+.yh-figure-items:last-of-type{
+  border-bottom: 0px solid #eee;
+}
+.yh-doctor-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.yh-figure-vw{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yh-figure-zhi{
+  color: #49A0FF;
+  display: flex;
+}
+
+radio {
+  transform:scale(0.8);
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.yh-doctor-cor{
+  color: #49A0FF;
+  font-weight: bold;
+  font-size: 24rpx;
+}
+button:not([size='mini']) {
+min-height: 0px;
+}
+
+button{
+  height: 72rpx !important;
+  width: 299rpx !important;
+  background-color: #49A0FF !important;
+  color: #fff;
+  margin: 20rpx;
+  border-radius: 40rpx;
+  font-weight: normal;
+}
